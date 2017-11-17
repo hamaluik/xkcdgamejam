@@ -21,7 +21,7 @@ https://itch.io/jam/xkcdgamejam
   + Cooking game, serving burgers (and other things?) to a hungry T-Rex
 * [Lunar Swimming](https://what-if.xkcd.com/124/): play a game of extreme water polo in a pool on the moon
 * [Orb Hammer](https://xkcd.com/1436/): fly a rocket to the moon and smash the glowing orb with a hammer until some chunks break off, then head home.
-* [Margaret](https://xkcd.com/1544/}: go on a mission to kick God's ass
+* [Margaret](https://xkcd.com/1544/): go on a mission to kick God's ass
   + Fighting game
   + Fight angels on your way to the big guy
 * [Geologist](https://xkcd.com/1198/): hunt rare rocks and mount them on your wall

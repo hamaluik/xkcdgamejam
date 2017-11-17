@@ -1,0 +1,18 @@
+[submodule "Kha"]
+	path = Kha
+	url = https://github.com/KTXSoftware/Kha
+[submodule "Libraries/gltf"]
+	path = Libraries/gltf
+	url = git@github.com:FuzzyWuzzie/haxe-gltf.git
+[submodule "Libraries/glm"]
+	path = Libraries/glm
+	url = git@github.com:FuzzyWuzzie/haxe-glm.git
+[submodule "Libraries/thx.core"]
+	path = Libraries/thx.core
+	url = https://github.com/fponticelli/thx.core
+[submodule "Libraries/edge"]
+	path = Libraries/edge
+	url = https://github.com/fponticelli/edge.git
+[submodule "Libraries/headbutt"]
+	path = Libraries/headbutt
+	url = git@github.com:FuzzyWuzzie/headbutt.git
