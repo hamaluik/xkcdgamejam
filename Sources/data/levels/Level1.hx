@@ -17,6 +17,7 @@ class Level1 implements Level {
             new components.MouseLook(),
             new components.Velocity(),
             new components.FPSMovement(),
+            new components.HeadBob(),
             new components.Crouch(),
             new components.Jump()
         ]);

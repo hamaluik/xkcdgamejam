@@ -1,5 +1,6 @@
 import kha.Assets;
 import kha.Image;
+import kha.Font;
 import gltf.GLTF;
 import types.Mesh;
 import glm.Vec3;
@@ -8,6 +9,7 @@ import glm.Vec3;
 class Resources {
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
+    public var font(default, null):Font;
 
     public var deadOak1(default, null):Mesh;
     public var deadOak2(default, null):Mesh;
@@ -28,6 +30,7 @@ class Resources {
     function new() {
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
+        font = Assets.fonts.Targa;
 
         var DeadOak1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.DeadOak1_gltf.toString(),

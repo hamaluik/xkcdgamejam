@@ -17,6 +17,7 @@ import kha.graphics4.CompareMode;
 import edge.ISystem;
 import edge.View;
 import components.Camera;
+import components.SnapCamera;
 import types.Mesh;
 using glm.Mat4;
 using glm.Vec4;
@@ -28,6 +29,7 @@ class RenderPostProcessing implements ISystem {
     public var vertexBuffer(default, null):VertexBuffer;
 	public var indexBuffer(default, null):IndexBuffer;
     var resolutionID:ConstantLocation;
+    var paramsID:ConstantLocation;
     var texID:TextureUnit;
     var bg:Color = Color.Magenta;
 
@@ -56,6 +58,7 @@ class RenderPostProcessing implements ISystem {
         }
 
 		resolutionID = postPipeline.getConstantLocation("resolution");
+		paramsID = postPipeline.getConstantLocation("params");
 		texID = postPipeline.getTextureUnit("tex");
 
         var vertices:Array<Float> = [
@@ -85,12 +88,13 @@ class RenderPostProcessing implements ISystem {
 		indexBuffer.unlock();
     }
 
-    function update(cam:Camera) {
+    function update(cam:Camera, s:SnapCamera) {
         var g = Game.state.g4;
         g.begin();
         g.clear(bg, 1);
         g.setPipeline(postPipeline);
         
+        g.setFloat4(paramsID, s.flash, s.transition, 0, 0);
         g.setFloat2(resolutionID, Game.state.w, Game.state.h);
         g.setTexture(texID, cam.renderBuffer);
 

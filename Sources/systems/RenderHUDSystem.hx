@@ -17,6 +17,10 @@ class RenderHUDSystem implements ISystem {
         g.color = Color.fromFloats(1, 1, 1, s.transition);
         g.drawImage(Game.resources.cameraOverlay, 0, 0);
 
+        g.font = Game.resources.font;
+        g.fontSize = 32;
+        g.drawString("30/30", 525, 428);
+
         g.end();
     }
 }

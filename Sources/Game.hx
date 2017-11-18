@@ -31,7 +31,10 @@ class Game {
 
         Mouse.get(0).notify(
             function(b, x, y) {
-                if(b == 0) state.mouseDown = true;
+                if(b == 0) {
+                    state.mouseDown = true;
+                    state.mousePressed = true;
+                }
                 else if(b == 1) state.inputRightMouse = true;
             },
             function(b, x, y) {
@@ -90,6 +93,7 @@ class Game {
         updatePhase.add(new systems.FPSMovementSystem());
         updatePhase.add(new systems.CrouchSystem());
         updatePhase.add(new systems.JumpSystem());
+        updatePhase.add(new systems.HeadBobSystem());
         updatePhase.add(new systems.VerticalOffsetSystem());
         updatePhase.add(new systems.MouseLookSystem());
         updatePhase.add(new systems.VelocitySystem());
@@ -97,6 +101,7 @@ class Game {
         updatePhase.add(new systems.MatricesTransform());
         updatePhase.add(new systems.MatricesShadows());
         updatePhase.add(new systems.MatricesCamera());
+        updatePhase.add(new systems.PictureTakingSystem());
 
         renderPhase = engine.createPhase();
         renderPhase.add(new systems.RenderShadows());
@@ -122,6 +127,7 @@ class Game {
         state.mouseDeltaX = 0;
         state.mouseDeltaY = 0;
         state.jumpPressed = false;
+        state.mousePressed = false;
     }
 
     static function render(fb:Framebuffer):Void {

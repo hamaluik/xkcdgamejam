@@ -9,6 +9,8 @@ class Settings {
     public static var runMultiplier:Float = 2.0;
     public static var crouchMagnitude:Float = 0.8;
     public static var crouchTime:Float = 0.1;
+    public static var headBobMagnitude:Float = 0.05;
+    public static var headBobFrequency:Float = 0.25;
     public static var jumpGravity:Float = 20;
     public static var jumpSpeed:Float = 5;
 }
