@@ -1,0 +1,139 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 1062, 
+            "max" : [
+                382
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 383, 
+            "max" : [
+                0.24088436365127563, 
+                0.4216671586036682, 
+                0.1184619814157486
+            ], 
+            "min" : [
+                -0.23318687081336975, 
+                -0.0012283712858334184, 
+                -0.11846192926168442
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 383, 
+            "max" : [
+                0.9695119857788086, 
+                0.9979552626609802, 
+                0.9998779296875
+            ], 
+            "min" : [
+                -0.9537339210510254, 
+                -0.9856563210487366, 
+                -0.9998779296875
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 383, 
+            "max" : [
+                0.22147046029567719, 
+                0.17611169815063477
+            ], 
+            "min" : [
+                0.01752043515443802, 
+                0.14728885889053345
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 2124, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4596, 
+            "byteOffset" : 2124, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4596, 
+            "byteOffset" : 6720, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 3064, 
+            "byteOffset" : 11316, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 14380, 
+            "uri" : "BunKing.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "BunKing", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "BunKing", 
+            "rotation" : [
+                0.0, 
+                -0.7684073448181152, 
+                -0.0, 
+                0.6399610638618469
+            ], 
+            "translation" : [
+                8.817917823791504, 
+                0.0, 
+                -2.3749325275421143
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

@@ -1,14 +1,33 @@
 package systems;
 
 import edge.ISystem;
+import edge.Entity;
 import components.Camera;
 import components.SnapCamera;
+import components.Film;
 import utils.FloatTools;
 
 class PictureTakingSystem implements ISystem {
-    function update(c:Camera, sc:SnapCamera) {
-        if(Game.state.mousePressed && Math.abs(sc.transition - 1.0) <= 0.0001) {
-            sc.snapping = true;
+    var entity:Entity;
+
+    function update(c:Camera, sc:SnapCamera, f:Film) {
+        if(!sc.snapping && Game.state.mousePressed && Math.abs(sc.transition - 1.0) <= 0.0001) {
+            var shotsTaken:Int = 0;
+            var shotsTotal:Int = f.shots.length;
+            for(shot in f.shots) {
+                if(shot.taken) shotsTaken++;
+            }
+            if(shotsTaken < shotsTotal) {
+                sc.snapping = true;
+                
+                f.shots[shotsTaken].taken = true;
+                // TODO: take picture with bun detector
+                // take a picture of the actual scene
+                entity.add(new components.Shot(f.shots[shotsTaken]));
+
+                // don't start flashing yet!
+                return;
+            }
         }
 
         if(!sc.snapping) return;

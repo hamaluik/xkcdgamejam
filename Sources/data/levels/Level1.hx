@@ -19,7 +19,8 @@ class Level1 implements Level {
             new components.FPSMovement(),
             new components.HeadBob(),
             new components.Crouch(),
-            new components.Jump()
+            new components.Jump(),
+            new components.Film()
         ]);
 
         Game.engine.create([
@@ -39,7 +40,7 @@ class Level1 implements Level {
         for(n in Game.resources.forest) {
             Game.engine.create([
                 new components.Transform(n.pos),
-                new components.MeshRender(n.mesh, Game.resources.palette)
+                new components.MeshRender(n.mesh, n.bunFactor, Game.resources.palette)
             ]);
         }
     }

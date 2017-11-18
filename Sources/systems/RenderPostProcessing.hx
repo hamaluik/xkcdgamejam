@@ -18,6 +18,7 @@ import edge.ISystem;
 import edge.View;
 import components.Camera;
 import components.SnapCamera;
+import components.Shot;
 import types.Mesh;
 using glm.Mat4;
 using glm.Vec4;
@@ -25,6 +26,8 @@ using glm.Vec3;
 
 @:allow(Game)
 class RenderPostProcessing implements ISystem {
+    var shots:View<{shot:Shot}>;
+
 	var postPipeline:PipelineState;
     public var vertexBuffer(default, null):VertexBuffer;
 	public var indexBuffer(default, null):IndexBuffer;
@@ -101,5 +104,24 @@ class RenderPostProcessing implements ISystem {
         g.setVertexBuffer(vertexBuffer);
         g.setIndexBuffer(indexBuffer);
         g.drawIndexedVertices();
+
+        // also render any shots!
+        for(shot in shots) {
+            g = shot.data.shot.target.photo.g4;
+            g.begin();
+            g.clear(bg, 1);
+            g.setPipeline(postPipeline);
+            
+            g.setFloat4(paramsID, s.flash, s.transition, 1, 0);
+            g.setFloat2(resolutionID, Game.state.w, Game.state.h);
+            g.setTexture(texID, cam.renderBuffer);
+
+            g.setVertexBuffer(vertexBuffer);
+            g.setIndexBuffer(indexBuffer);
+            g.drawIndexedVertices();
+
+            // delete the shot now that we've taken it
+            shot.entity.remove(shot.data.shot);
+        }
     }
 }

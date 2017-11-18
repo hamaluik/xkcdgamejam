@@ -1,7 +1,7 @@
 #version 450
 
 uniform vec2 resolution;
-uniform vec4 params; // flash, desaturation, ?, ?
+uniform vec4 params; // flash, desaturation, yflip, ?
 uniform sampler2D tex;
 
 out vec4 fragColour;
@@ -10,7 +10,8 @@ const float vignetteRadius = 0.75;
 const float vignetteSoftness = 0.45;
 
 void main() {
-    vec2 uv = gl_FragCoord.xy / resolution;
+    float y = mix(gl_FragCoord.y, resolution.y - gl_FragCoord.y, params.z);
+    vec2 uv = vec2(gl_FragCoord.x, y) / resolution;
     vec3 screen = texture(tex, uv).rgb;
 
     // desaturate

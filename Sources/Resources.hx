@@ -3,6 +3,7 @@ import kha.Image;
 import kha.Font;
 import gltf.GLTF;
 import types.Mesh;
+import glm.Vec4;
 import glm.Vec3;
 
 @:allow(Game)
@@ -11,6 +12,9 @@ class Resources {
     public var cameraOverlay(default, null):Image;
     public var font(default, null):Font;
 
+    public var bun1(default, null):Mesh;
+    public var bun2(default, null):Mesh;
+    public var bunKing(default, null):Mesh;
     public var deadOak1(default, null):Mesh;
     public var deadOak2(default, null):Mesh;
     public var deadOak3(default, null):Mesh;
@@ -25,12 +29,30 @@ class Resources {
     public var spruceTree3(default, null):Mesh;
     public var ground(default, null):Mesh;
 
-    public var forest(default, null):Array<{ mesh:Mesh, pos:Vec3 }>;
+    public var forest(default, null):Array<{ mesh:Mesh, bunFactor:Vec4, pos:Vec3 }>;
 
     function new() {
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
         font = Assets.fonts.Targa;
+
+        var Bun1_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Bun1_gltf.toString(),
+            [Assets.blobs.Bun1_bin.bytes]
+        );
+        bun1 = Mesh.fromGLTFPrimitive(Bun1_g.meshes[0].primitives[0]);
+
+        var Bun2_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Bun2_gltf.toString(),
+            [Assets.blobs.Bun2_bin.bytes]
+        );
+        bun2 = Mesh.fromGLTFPrimitive(Bun2_g.meshes[0].primitives[0]);
+
+        var BunKing_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BunKing_gltf.toString(),
+            [Assets.blobs.BunKing_bin.bytes]
+        );
+        bunKing = Mesh.fromGLTFPrimitive(BunKing_g.meshes[0].primitives[0]);
 
         var DeadOak1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.DeadOak1_gltf.toString(),
@@ -115,10 +137,19 @@ class Resources {
         );
         forest = [];
         for(node in Forest_g.defaultScene.nodes) {
-            if(node.mesh == null || node.translation == null) continue;
+            if(node.mesh == null) continue;
             var n = {
-                pos: new Vec3(node.translation[0], node.translation[1], node.translation[2]),
+                pos: node.translation == null ? new Vec3() : new Vec3(node.translation[0], node.translation[1], node.translation[2]),
+                bunFactor: switch(node.mesh.name) {
+                    case 'Bun1': new Vec4(1, 0, 0, 0);
+                    case 'Bun2': new Vec4(0, 1, 0, 0);
+                    case 'BunKing': new Vec4(1, 0, 1, 0);
+                    default: new Vec4();
+                },
                 mesh: switch(node.mesh.name) {
+                    case 'Bun1': bun1;
+                    case 'Bun2': bun2;
+                    case 'BunKing': bunKing;
                     case 'DeadOak1': deadOak1;
                     case 'DeadOak2': deadOak2;
                     case 'DeadOak3': deadOak3;
