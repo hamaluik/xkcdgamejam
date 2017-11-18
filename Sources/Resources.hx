@@ -7,6 +7,7 @@ import glm.Vec3;
 @:allow(Game)
 class Resources {
     public var palette(default, null):Image;
+    public var cameraOverlay(default, null):Image;
 
     public var deadOak1(default, null):Mesh;
     public var deadOak2(default, null):Mesh;
@@ -26,6 +27,7 @@ class Resources {
 
     function new() {
         palette = Assets.images.palette;
+        cameraOverlay = Assets.images.cameraoverlay;
 
         var DeadOak1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.DeadOak1_gltf.toString(),

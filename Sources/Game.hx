@@ -30,8 +30,14 @@ class Game {
         resources = new Resources();
 
         Mouse.get(0).notify(
-            function(b, x, y) { if(b == 0) state.mouseDown = true; },
-            function(b, x, y) { if(b == 0) state.mouseDown = false; },
+            function(b, x, y) {
+                if(b == 0) state.mouseDown = true;
+                else if(b == 1) state.inputRightMouse = true;
+            },
+            function(b, x, y) {
+                if(b == 0) state.mouseDown = false;
+                else if(b == 1) state.inputRightMouse = false;
+            },
             function(x:Int, y:Int, mx:Int, my:Int):Void {
                 state.mouseX = x;
                 state.mouseY = y;
@@ -50,7 +56,7 @@ class Game {
                     case A: state.inputLeft = 1.0;
                     case Shift: state.runDown = true;
                     case C: state.crouchDown = true;
-                    case V: state.camDown = true;
+                    case V: state.inputV = true;
                     case Space: {
                         state.jumpDown = true;
                         state.jumpPressed = true;
@@ -66,7 +72,7 @@ class Game {
                     case A: state.inputLeft = 0.0;
                     case Shift: state.runDown = false;
                     case C: state.crouchDown = false;
-                    case V: state.camDown = false;
+                    case V: state.inputV = false;
                     case Space: state.jumpDown = false;
                     default:
                 }
