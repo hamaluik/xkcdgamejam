@@ -1,0 +1,133 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 588, 
+            "max" : [
+                391
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 392, 
+            "max" : [
+                4.185107707977295, 
+                9.499992370605469, 
+                4.347231864929199
+            ], 
+            "min" : [
+                -4.278689861297607, 
+                -0.07684898376464844, 
+                -3.222874164581299
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 392, 
+            "max" : [
+                0.99920654296875, 
+                0.9974974989891052, 
+                0.999481201171875
+            ], 
+            "min" : [
+                -0.9975890517234802, 
+                -0.9974974989891052, 
+                -0.9998779296875
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 392, 
+            "max" : [
+                0.29551249742507935, 
+                0.042051851749420166
+            ], 
+            "min" : [
+                0.2713897228240967, 
+                0.017929017543792725
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 1176, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4704, 
+            "byteOffset" : 1176, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4704, 
+            "byteOffset" : 5880, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 3136, 
+            "byteOffset" : 10584, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 13720, 
+            "uri" : "DeadOak3.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "DeadOak3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "DeadOak3", 
+            "translation" : [
+                -6.0943427085876465, 
+                0.0, 
+                9.673309326171875
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

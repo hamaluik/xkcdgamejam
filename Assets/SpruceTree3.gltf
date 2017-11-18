@@ -1,0 +1,133 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 531, 
+            "max" : [
+                354
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 355, 
+            "max" : [
+                2.6324121952056885, 
+                13.53939151763916, 
+                2.359661102294922
+            ], 
+            "min" : [
+                -2.6171932220458984, 
+                -0.0065073068253695965, 
+                -2.2603440284729004
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 355, 
+            "max" : [
+                0.9981688857078552, 
+                1.0, 
+                0.9934995770454407
+            ], 
+            "min" : [
+                -0.9696035385131836, 
+                -0.999969482421875, 
+                -0.9807122945785522
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 355, 
+            "max" : [
+                0.17542868852615356, 
+                0.047467947006225586
+            ], 
+            "min" : [
+                0.027068613097071648, 
+                0.017434537410736084
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 1062, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4260, 
+            "byteOffset" : 1064, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 4260, 
+            "byteOffset" : 5324, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 2840, 
+            "byteOffset" : 9584, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 12424, 
+            "uri" : "SpruceTree3.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "SpruceTree3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "SpruceTree3", 
+            "translation" : [
+                -0.000565946102142334, 
+                0.0, 
+                -12.41132926940918
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

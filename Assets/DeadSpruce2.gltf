@@ -1,0 +1,139 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 1098, 
+            "max" : [
+                729
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 730, 
+            "max" : [
+                1.1093991994857788, 
+                4.87467098236084, 
+                0.9689126014709473
+            ], 
+            "min" : [
+                -1.0143388509750366, 
+                -0.0017346472013741732, 
+                -1.0925623178482056
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 730, 
+            "max" : [
+                0.9998779296875, 
+                1.0, 
+                0.9998779296875
+            ], 
+            "min" : [
+                -0.999481201171875, 
+                -0.999969482421875, 
+                -0.999481201171875
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 730, 
+            "max" : [
+                0.10186150670051575, 
+                0.040341973304748535
+            ], 
+            "min" : [
+                0.0762370377779007, 
+                0.014717459678649902
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 2196, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 8760, 
+            "byteOffset" : 2196, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 8760, 
+            "byteOffset" : 10956, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 5840, 
+            "byteOffset" : 19716, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 25556, 
+            "uri" : "DeadSpruce2.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "DeadSpruce2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "DeadSpruce2", 
+            "rotation" : [
+                -7.797544299137371e-08, 
+                -0.2893623113632202, 
+                -2.35715553742466e-08, 
+                0.957219660282135
+            ], 
+            "translation" : [
+                8.600957870483398, 
+                -4.76837158203125e-07, 
+                -2.502408027648926
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0, 
+            "componentType" : 5123, 
+            "count" : 1596, 
+            "max" : [
+                1455
+            ], 
+            "min" : [
+                0
+            ], 
+            "type" : "SCALAR"
+        }, 
+        {
+            "bufferView" : 1, 
+            "componentType" : 5126, 
+            "count" : 1456, 
+            "max" : [
+                4.447482585906982, 
+                9.587498664855957, 
+                3.0874361991882324
+            ], 
+            "min" : [
+                -5.3084282875061035, 
+                -9.659426325470122e-08, 
+                -3.191439628601074
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 2, 
+            "componentType" : 5126, 
+            "count" : 1456, 
+            "max" : [
+                0.9944761395454407, 
+                0.9940488934516907, 
+                0.9970396757125854
+            ], 
+            "min" : [
+                -0.9986571669578552, 
+                -1.0, 
+                -0.9961241483688354
+            ], 
+            "type" : "VEC3"
+        }, 
+        {
+            "bufferView" : 3, 
+            "componentType" : 5126, 
+            "count" : 1456, 
+            "max" : [
+                0.3514550030231476, 
+                0.04139631986618042
+            ], 
+            "min" : [
+                0.22885280847549438, 
+                0.013662993907928467
+            ], 
+            "type" : "VEC2"
+        }
+    ], 
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    }, 
+    "bufferViews" : [
+        {
+            "buffer" : 0, 
+            "byteLength" : 3192, 
+            "byteOffset" : 0, 
+            "target" : 34963
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 17472, 
+            "byteOffset" : 3192, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 17472, 
+            "byteOffset" : 20664, 
+            "target" : 34962
+        }, 
+        {
+            "buffer" : 0, 
+            "byteLength" : 11648, 
+            "byteOffset" : 38136, 
+            "target" : 34962
+        }
+    ], 
+    "buffers" : [
+        {
+            "byteLength" : 49784, 
+            "uri" : "OakTree1.bin"
+        }
+    ], 
+    "meshes" : [
+        {
+            "name" : "OakTree1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 0, 
+            "name" : "OakTree1", 
+            "rotation" : [
+                0.0, 
+                -0.28563985228538513, 
+                -0.0, 
+                0.9583370685577393
+            ], 
+            "translation" : [
+                4.75474739074707, 
+                2.384185791015625e-07, 
+                11.50791072845459
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                0
+            ]
+        }
+    ]
+}
