@@ -32,8 +32,8 @@ class RenderHUDSystem implements ISystem {
             g.color = Color.White;
             g.drawScaledImage(
                 f.shots[shotsTaken - 1].photo,
-                0, 0,
-                80, 60
+                240, 0,
+                160, 120
             );
         }
 

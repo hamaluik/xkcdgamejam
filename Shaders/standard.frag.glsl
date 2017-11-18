@@ -61,6 +61,10 @@ void main() {
 
 	float dLight0 = clamp(dot(norm, lightDirection), 0.0, 1.0) * 0.5 + 0.5;
     vec3 light = lightColour * dLight0 * visibility + ambientColour;
+
+    vec3 colour = texture(tex, uv).rgb * light;
+    float boundaryFactor = smoothstep(47, 49, length(pos.xz));
+    colour = mix(colour, vec3(0.37254901960784315, 0.3411764705882353, 0.30980392156862746), boundaryFactor);
     
-    fragColour = vec4(texture(tex, uv).rgb * light, 1.0);
+    fragColour = vec4(colour, 1.0);
 }

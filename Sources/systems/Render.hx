@@ -41,7 +41,7 @@ class Render implements ISystem {
     var shadowMapID:TextureUnit;
     var shadowBiasID:ConstantLocation;
 
-    var bg:Color = Color.Black;
+    var bg:Color = Color.fromFloats(0, 0, 0, 0);
     var mvp:Mat4;
     var lightDirection:Vec3;
     var lightColour:Vec3;
