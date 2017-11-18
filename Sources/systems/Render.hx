@@ -29,24 +29,24 @@ class Render implements ISystem {
 
 	var standardPipeline:PipelineState;
 	var mvpID:ConstantLocation;
-	var mvID:ConstantLocation;
+	var nID:ConstantLocation;
     var lightDirectionID:ConstantLocation;
     var lightColourID:ConstantLocation;
     var ambientColourID:ConstantLocation;
     var texID:TextureUnit;
 
     var bg:Color = Color.Black;
-    var mv:Mat4;
+    var n:Mat4;
     var mvp:Mat4;
-    var lightDirection:Vec4;
+    var lightDirection:Vec3;
     var lightColour:Vec3;
     var ambientColour:Vec3;
 
     function new() {
         // initialize everything!
         mvp = new Mat4();
-        mv = new Mat4();
-        lightDirection = new Vec4(0, 0, 0, 1);
+        n = new Mat4();
+        lightDirection = new Vec3(0, 1, 0);
         lightColour = new Vec3(1, 1, 1);
         ambientColour = new Vec3(0, 0, 0);
 
@@ -76,7 +76,7 @@ class Render implements ISystem {
         }
 
 		mvpID = standardPipeline.getConstantLocation("MVP");
-		mvID = standardPipeline.getConstantLocation("MV");
+		nID = standardPipeline.getConstantLocation("N");
 		lightDirectionID = standardPipeline.getConstantLocation("lightDirection");
 		lightColourID = standardPipeline.getConstantLocation("lightColour");
 		ambientColourID = standardPipeline.getConstantLocation("ambientColour");
@@ -95,16 +95,13 @@ class Render implements ISystem {
 
         // lights!
         for(light in directionalLights) {
-            lightDirection.x = light.data.l.direction.x;
-            lightDirection.y = light.data.l.direction.y;
-            lightDirection.z = light.data.l.direction.z;
+            light.data.l.direction.copy(lightDirection);
             light.data.l.colour.copy(lightColour);
         }
         for(light in ambientLights) {
             light.data.l.colour.copy(ambientColour);
         }
-        // TODO: calculate the light direction in camera space
-        g.setFloat3(lightDirectionID, lightDirection.x, lightDirection.y, lightDirection.z);
+        g.setVector3(lightDirectionID, lightDirection);
         g.setVector3(lightColourID, lightColour);
         g.setVector3(ambientColourID, ambientColour);
 
@@ -116,10 +113,12 @@ class Render implements ISystem {
             if(shouldCull(mvp, rmr.mesh)) {
                 continue;
             }
-            mv = Mat4.multMat(cam.v, rt.m, mv);
+            n = Mat4.multMat(cam.v, rt.m, n);
+            n.invert(n);
+            n.transpose(n);
 
             g.setMatrix(mvpID, mvp);
-            g.setMatrix(mvID, mv);
+            g.setMatrix(nID, n);
             g.setTexture(texID, rmr.texture);
 
             g.setVertexBuffer(rmr.mesh.vertexBuffer);

@@ -2,6 +2,8 @@ import kha.System;
 import kha.math.Random;
 import kha.Framebuffer;
 import kha.input.Mouse;
+import kha.input.Keyboard;
+import kha.input.KeyCode;
 import edge.Engine;
 import edge.Phase;
 import data.Level;
@@ -39,6 +41,27 @@ class Game {
             null,
             null
         );
+        Keyboard.get(0).notify(
+            function(k:KeyCode):Void {
+                switch(k) {
+                    case W: state.inputForward = 1.0;
+                    case S: state.inputBack = 1.0;
+                    case D: state.inputRight = 1.0;
+                    case A: state.inputLeft = 1.0;
+                    default:
+                }
+            },
+            function(k:KeyCode):Void {
+                switch(k) {
+                    case W: state.inputForward = 0.0;
+                    case S: state.inputBack = 0.0;
+                    case D: state.inputRight = 0.0;
+                    case A: state.inputLeft = 0.0;
+                    default:
+                }
+            },
+            null
+        );
         kha.SystemImpl.notifyOfMouseLockChange(pointerLockChanged, function() {
             Game.state.pointerLocked = false;
         });
@@ -49,7 +72,9 @@ class Game {
 
 		engine = new Engine();
         updatePhase = engine.createPhase();
+        updatePhase.add(new systems.FPSMovementSystem());
         updatePhase.add(new systems.MouseLookSystem());
+        updatePhase.add(new systems.VelocitySystem());
         updatePhase.add(new systems.MatricesTransform());
         updatePhase.add(new systems.MatricesCamera());
 

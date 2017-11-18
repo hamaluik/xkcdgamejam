@@ -13,12 +13,14 @@ class Level1 implements Level {
                 new Quat().identity()
             ),
             new components.Camera(45, 0.1, 100),
-            new components.MouseLook()
+            new components.MouseLook(),
+            new components.Velocity(),
+            new components.FPSMovement(5.0)
         ]);
 
         Game.engine.create([
             new components.LightDirection(
-                new Vec3(1, 1, 1).normalize(new Vec3()),
+                new Vec3(0, 1, 0).normalize(new Vec3()),
                 new Vec3(1, 1, 1)
             ),
             new components.LightAmbient(

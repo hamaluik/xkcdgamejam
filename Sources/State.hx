@@ -6,8 +6,24 @@ class State {
     public var mouseY(default, null):Float = 0;
     public var mouseDeltaX(default, null):Float = 0;
     public var mouseDeltaY(default, null):Float = 0;
+
     public var mouseDown(default, null):Bool = false;
+
     public var pointerLocked(default, null):Bool = false;
+
+    var inputForward:Float = 0;
+    var inputBack:Float = 0;
+    var inputRight:Float = 0;
+    var inputLeft:Float = 0;
+
+    public var forwardBackwardAxis(get, never):Float;
+    function get_forwardBackwardAxis():Float {
+        return inputForward - inputBack;
+    }
+    public var rightLeftAxis(get, never):Float;
+    function get_rightLeftAxis():Float {
+        return inputRight - inputLeft;
+    }
 
     public var time(default, null):Float =  0.0;
     public var dt_variable(default, null):Float =  0.0;
