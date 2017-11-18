@@ -9,7 +9,7 @@ class Level1 implements Level {
     public function load():Void {
         Game.engine.create([
             new components.Transform(
-                new Vec3(0, 0, 5),
+                new Vec3(0, 1.6, 5),
                 new Quat().identity()
             ),
             new components.Camera(45, 0.1, 100),
@@ -20,18 +20,24 @@ class Level1 implements Level {
 
         Game.engine.create([
             new components.LightDirection(
-                new Vec3(0, 1, 0).normalize(new Vec3()),
                 new Vec3(1, 1, 1)
             ),
             new components.LightAmbient(
                 new Vec3(0.1, 0.1, 0.1)
+            ),
+            new components.SunShadow(),
+            new components.Transform(
+                new Vec3(0, 30, 0),
+                Quat.fromEuler(-Math.PI/4, 0, 0, new Quat())
             )
         ]);
 
-        Game.engine.create([
-            new components.Transform(),
-            new components.MeshRender(Game.resources.cube, Game.resources.uvgrid)
-        ]);
+        for(n in Game.resources.forest) {
+            Game.engine.create([
+                new components.Transform(n.pos),
+                new components.MeshRender(n.mesh, Game.resources.palette)
+            ]);
+        }
     }
 
     public function unload():Void {

@@ -1,0 +1,359 @@
+{
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter", 
+        "version" : "2.0"
+    },
+    "meshes" : [
+        {
+            "name" : "SpruceTree2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2, 
+                        "POSITION" : 1, 
+                        "TEXCOORD_0" : 3
+                    }, 
+                    "indices" : 0
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadOak2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 6, 
+                        "POSITION" : 5, 
+                        "TEXCOORD_0" : 7
+                    }, 
+                    "indices" : 4
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadSpruce1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 10, 
+                        "POSITION" : 9, 
+                        "TEXCOORD_0" : 11
+                    }, 
+                    "indices" : 8
+                }
+            ]
+        }, 
+        {
+            "name" : "SpruceTree3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 14, 
+                        "POSITION" : 13, 
+                        "TEXCOORD_0" : 15
+                    }, 
+                    "indices" : 12
+                }
+            ]
+        }, 
+        {
+            "name" : "SpruceTree1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 18, 
+                        "POSITION" : 17, 
+                        "TEXCOORD_0" : 19
+                    }, 
+                    "indices" : 16
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadOak1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 22, 
+                        "POSITION" : 21, 
+                        "TEXCOORD_0" : 23
+                    }, 
+                    "indices" : 20
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadOak3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 26, 
+                        "POSITION" : 25, 
+                        "TEXCOORD_0" : 27
+                    }, 
+                    "indices" : 24
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 30, 
+                        "POSITION" : 29, 
+                        "TEXCOORD_0" : 31
+                    }, 
+                    "indices" : 28
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 34, 
+                        "POSITION" : 33, 
+                        "TEXCOORD_0" : 35
+                    }, 
+                    "indices" : 32
+                }
+            ]
+        }, 
+        {
+            "name" : "Ground", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 38, 
+                        "POSITION" : 37, 
+                        "TEXCOORD_0" : 39
+                    }, 
+                    "indices" : 36
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadSpruce3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 42, 
+                        "POSITION" : 41, 
+                        "TEXCOORD_0" : 43
+                    }, 
+                    "indices" : 40
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 46, 
+                        "POSITION" : 45, 
+                        "TEXCOORD_0" : 47
+                    }, 
+                    "indices" : 44
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadSpruce2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 50, 
+                        "POSITION" : 49, 
+                        "TEXCOORD_0" : 51
+                    }, 
+                    "indices" : 48
+                }
+            ]
+        }
+    ], 
+    "nodes" : [
+        {
+            "mesh" : 5, 
+            "name" : "DeadOak1", 
+            "rotation" : [
+                0.0, 
+                -0.43099597096443176, 
+                -0.0, 
+                0.9023538827896118
+            ], 
+            "translation" : [
+                -7.129398822784424, 
+                0.0, 
+                -2.715898036956787
+            ]
+        }, 
+        {
+            "mesh" : 1, 
+            "name" : "DeadOak2", 
+            "translation" : [
+                -0.9799482226371765, 
+                0.0, 
+                5.2271504402160645
+            ]
+        }, 
+        {
+            "mesh" : 6, 
+            "name" : "DeadOak3", 
+            "translation" : [
+                -6.0943427085876465, 
+                0.0, 
+                9.673309326171875
+            ]
+        }, 
+        {
+            "mesh" : 2, 
+            "name" : "DeadSpruce1", 
+            "translation" : [
+                0.4563102722167969, 
+                0.0, 
+                20.453454971313477
+            ]
+        }, 
+        {
+            "mesh" : 12, 
+            "name" : "DeadSpruce2", 
+            "rotation" : [
+                -7.797544299137371e-08, 
+                -0.2893623113632202, 
+                -2.35715553742466e-08, 
+                0.957219660282135
+            ], 
+            "translation" : [
+                8.600957870483398, 
+                -4.76837158203125e-07, 
+                -2.502408027648926
+            ]
+        }, 
+        {
+            "mesh" : 10, 
+            "name" : "DeadSpruce3", 
+            "translation" : [
+                -8.573705673217773, 
+                4.76837158203125e-07, 
+                -10.524246215820312
+            ]
+        }, 
+        {
+            "mesh" : 9, 
+            "name" : "Ground", 
+            "translation" : [
+                0,
+                0,
+                0
+            ]
+        }, 
+        {
+            "mesh" : 11, 
+            "name" : "OakTree1", 
+            "rotation" : [
+                0.0, 
+                -0.28563985228538513, 
+                -0.0, 
+                0.9583370685577393
+            ], 
+            "translation" : [
+                4.75474739074707, 
+                2.384185791015625e-07, 
+                11.50791072845459
+            ]
+        }, 
+        {
+            "mesh" : 7, 
+            "name" : "OakTree2", 
+            "rotation" : [
+                0.0, 
+                0.25643184781074524, 
+                -0.0, 
+                0.9665623307228088
+            ], 
+            "translation" : [
+                9.878192901611328, 
+                0.0, 
+                7.33246374130249
+            ]
+        }, 
+        {
+            "mesh" : 8, 
+            "name" : "OakTree3", 
+            "rotation" : [
+                0.0, 
+                -0.2966584265232086, 
+                -0.0, 
+                0.954983651638031
+            ], 
+            "translation" : [
+                10.019947052001953, 
+                0.0, 
+                -11.273687362670898
+            ]
+        }, 
+        {
+            "mesh" : 4, 
+            "name" : "SpruceTree1", 
+            "rotation" : [
+                -8.146033536604591e-08, 
+                0.0, 
+                -0.0, 
+                1.0
+            ], 
+            "translation" : [
+                -9.766432762145996, 
+                0.0, 
+                4.154987812042236
+            ]
+        }, 
+        {
+            "mesh" : 0, 
+            "name" : "SpruceTree2", 
+            "rotation" : [
+                0.0, 
+                -0.414939820766449, 
+                -0.0, 
+                0.9098488688468933
+            ], 
+            "translation" : [
+                15.554632186889648, 
+                0.0, 
+                1.1463313102722168
+            ]
+        }, 
+        {
+            "mesh" : 3, 
+            "name" : "SpruceTree3", 
+            "translation" : [
+                -0.000565946102142334, 
+                0.0, 
+                -12.41132926940918
+            ]
+        }
+    ], 
+    "scene" : 0, 
+    "scenes" : [
+        {
+            "name" : "Scene", 
+            "nodes" : [
+                6, 
+                5, 
+                3, 
+                4, 
+                2, 
+                1, 
+                0, 
+                9, 
+                8, 
+                7, 
+                12, 
+                11, 
+                10
+            ]
+        }
+    ]
+}

@@ -2,6 +2,7 @@ package systems;
 
 import kha.Color;
 import kha.Shaders;
+import kha.Image;
 import kha.graphics4.PipelineState;
 import kha.graphics4.VertexStructure;
 import kha.graphics4.VertexData;
@@ -16,6 +17,7 @@ import components.MeshRender;
 import components.Transform;
 import components.LightDirection;
 import components.LightAmbient;
+import components.SunShadow;
 import types.Mesh;
 using glm.Mat4;
 using glm.Vec4;
@@ -26,26 +28,29 @@ class Render implements ISystem {
     var renderables:View<{t:Transform, mr:MeshRender}>;
     var directionalLights:View<{l:LightDirection}>;
     var ambientLights:View<{l:LightAmbient}>;
+    var sunShadows:View<{ss:SunShadow}>;
 
 	var standardPipeline:PipelineState;
 	var mvpID:ConstantLocation;
-	var nID:ConstantLocation;
+	var mID:ConstantLocation;
     var lightDirectionID:ConstantLocation;
     var lightColourID:ConstantLocation;
     var ambientColourID:ConstantLocation;
     var texID:TextureUnit;
+    var shadowMVPID:ConstantLocation;
+    var shadowMapID:TextureUnit;
+    var shadowBiasID:ConstantLocation;
 
     var bg:Color = Color.Black;
-    var n:Mat4;
     var mvp:Mat4;
     var lightDirection:Vec3;
     var lightColour:Vec3;
     var ambientColour:Vec3;
+    var shadowBias:Float = 0.0005;
 
     function new() {
         // initialize everything!
         mvp = new Mat4();
-        n = new Mat4();
         lightDirection = new Vec3(0, 1, 0);
         lightColour = new Vec3(1, 1, 1);
         ambientColour = new Vec3(0, 0, 0);
@@ -76,11 +81,14 @@ class Render implements ISystem {
         }
 
 		mvpID = standardPipeline.getConstantLocation("MVP");
-		nID = standardPipeline.getConstantLocation("N");
+		mID = standardPipeline.getConstantLocation("M");
 		lightDirectionID = standardPipeline.getConstantLocation("lightDirection");
 		lightColourID = standardPipeline.getConstantLocation("lightColour");
 		ambientColourID = standardPipeline.getConstantLocation("ambientColour");
 		texID = standardPipeline.getTextureUnit("tex");
+		shadowMVPID = standardPipeline.getConstantLocation("shadowMVP");
+		shadowMapID = standardPipeline.getTextureUnit("shadowMap");
+		shadowBiasID = standardPipeline.getConstantLocation("shadowBias");
     }
 
     public function before():Void {
@@ -105,6 +113,13 @@ class Render implements ISystem {
         g.setVector3(lightColourID, lightColour);
         g.setVector3(ambientColourID, ambientColour);
 
+        // shadows
+        var shadowMap:Image = null;
+        for(ss in sunShadows) {
+            shadowMap = ss.data.ss.image;
+        }
+        g.setFloat(shadowBiasID, shadowBias);
+
         for(target in renderables) {
             var rt:Transform = target.data.t;
             var rmr:MeshRender = target.data.mr;
@@ -113,13 +128,12 @@ class Render implements ISystem {
             if(shouldCull(mvp, rmr.mesh)) {
                 continue;
             }
-            n = Mat4.multMat(cam.v, rt.m, n);
-            n.invert(n);
-            n.transpose(n);
 
             g.setMatrix(mvpID, mvp);
-            g.setMatrix(nID, n);
+            g.setMatrix(mID, rt.m);
+            g.setMatrix(shadowMVPID, rmr.shadowMVP);
             g.setTexture(texID, rmr.texture);
+            g.setTexture(shadowMapID, shadowMap);
 
             g.setVertexBuffer(rmr.mesh.vertexBuffer);
             g.setIndexBuffer(rmr.mesh.indexBuffer);

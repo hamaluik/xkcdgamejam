@@ -76,9 +76,11 @@ class Game {
         updatePhase.add(new systems.MouseLookSystem());
         updatePhase.add(new systems.VelocitySystem());
         updatePhase.add(new systems.MatricesTransform());
+        updatePhase.add(new systems.MatricesShadows());
         updatePhase.add(new systems.MatricesCamera());
 
         renderPhase = engine.createPhase();
+        renderPhase.add(new systems.RenderShadows());
         renderPhase.add(new systems.Render());
 
         levels[currentLevel].load();
