@@ -9,13 +9,15 @@ class Level1 implements Level {
     public function load():Void {
         Game.engine.create([
             new components.Transform(
-                new Vec3(0, 1.6, 5),
+                new Vec3(0, Settings.cameraHeight, 0),
                 new Quat().identity()
             ),
             new components.Camera(45, 0.1, 100),
             new components.MouseLook(),
             new components.Velocity(),
-            new components.FPSMovement(5.0)
+            new components.FPSMovement(),
+            new components.Crouch(),
+            new components.Jump()
         ]);
 
         Game.engine.create([

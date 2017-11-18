@@ -22,7 +22,10 @@ class FPSMovementSystem implements ISystem {
         flatDir.y = localForward.z * Game.state.forwardBackwardAxis + localRight.z * Game.state.rightLeftAxis;
         flatDir.normalize(flatDir);
 
-        vel.v.x = flatDir.x * f.speed;
-        vel.v.z = flatDir.y * f.speed;
+        var speed:Float = Settings.walkSpeed;
+        if(Game.state.runDown) speed *= Settings.runMultiplier;
+
+        vel.v.x = flatDir.x * speed;
+        vel.v.z = flatDir.y * speed;
     }
 }

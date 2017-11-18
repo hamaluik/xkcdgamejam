@@ -8,6 +8,11 @@ class State {
     public var mouseDeltaY(default, null):Float = 0;
 
     public var mouseDown(default, null):Bool = false;
+    public var runDown(default, null):Bool = false;
+    public var crouchDown(default, null):Bool = false;
+    public var camDown(default, null):Bool = false;
+    public var jumpDown(default, null):Bool = false;
+    public var jumpPressed(default, null):Bool = false;
 
     public var pointerLocked(default, null):Bool = false;
 

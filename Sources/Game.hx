@@ -48,6 +48,13 @@ class Game {
                     case S: state.inputBack = 1.0;
                     case D: state.inputRight = 1.0;
                     case A: state.inputLeft = 1.0;
+                    case Shift: state.runDown = true;
+                    case C: state.crouchDown = true;
+                    case V: state.camDown = true;
+                    case Space: {
+                        state.jumpDown = true;
+                        state.jumpPressed = true;
+                    }
                     default:
                 }
             },
@@ -57,6 +64,10 @@ class Game {
                     case S: state.inputBack = 0.0;
                     case D: state.inputRight = 0.0;
                     case A: state.inputLeft = 0.0;
+                    case Shift: state.runDown = false;
+                    case C: state.crouchDown = false;
+                    case V: state.camDown = false;
+                    case Space: state.jumpDown = false;
                     default:
                 }
             },
@@ -65,14 +76,15 @@ class Game {
         kha.SystemImpl.notifyOfMouseLockChange(pointerLockChanged, function() {
             Game.state.pointerLocked = false;
         });
-        
-        // TODO: input functions
 
         state = new State();
 
 		engine = new Engine();
         updatePhase = engine.createPhase();
         updatePhase.add(new systems.FPSMovementSystem());
+        updatePhase.add(new systems.CrouchSystem());
+        updatePhase.add(new systems.JumpSystem());
+        updatePhase.add(new systems.VerticalOffsetSystem());
         updatePhase.add(new systems.MouseLookSystem());
         updatePhase.add(new systems.VelocitySystem());
         updatePhase.add(new systems.MatricesTransform());
@@ -100,6 +112,7 @@ class Game {
 
         state.mouseDeltaX = 0;
         state.mouseDeltaY = 0;
+        state.jumpPressed = false;
     }
 
     static function render(fb:Framebuffer):Void {
