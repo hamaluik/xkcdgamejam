@@ -91,15 +91,12 @@ class Render implements ISystem {
 		shadowBiasID = standardPipeline.getConstantLocation("shadowBias");
     }
 
-    public function before():Void {
-        var g = Game.state.g4;
+    function update(cam:Camera, t:Transform) {
+        //var g = Game.state.g4;
+        var g = cam.renderBuffer.g4;
         g.begin();
         g.clear(bg, 1);
         g.setPipeline(standardPipeline);
-    }
-
-    function update(cam:Camera, t:Transform) {
-        var g = Game.state.g4;
 
         // lights!
         for(light in directionalLights) {

@@ -87,6 +87,7 @@ class Game {
         updatePhase.add(new systems.VerticalOffsetSystem());
         updatePhase.add(new systems.MouseLookSystem());
         updatePhase.add(new systems.VelocitySystem());
+        updatePhase.add(new systems.CameraZoomSystem());
         updatePhase.add(new systems.MatricesTransform());
         updatePhase.add(new systems.MatricesShadows());
         updatePhase.add(new systems.MatricesCamera());
@@ -94,6 +95,8 @@ class Game {
         renderPhase = engine.createPhase();
         renderPhase.add(new systems.RenderShadows());
         renderPhase.add(new systems.Render());
+        renderPhase.add(new systems.RenderPostProcessing());
+        renderPhase.add(new systems.RenderHUDSystem());
 
         levels[currentLevel].load();
 

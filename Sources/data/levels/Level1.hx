@@ -13,6 +13,7 @@ class Level1 implements Level {
                 new Quat().identity()
             ),
             new components.Camera(45, 0.1, 100),
+            new components.SnapCamera(),
             new components.MouseLook(),
             new components.Velocity(),
             new components.FPSMovement(),

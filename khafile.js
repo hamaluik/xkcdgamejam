@@ -16,7 +16,7 @@ project.addParameter('-debug');
 //project.addParameter('-dce full');
 
 // HTML target
-project.windowOptions.width = 640;
-project.windowOptions.height = 480;
+project.windowOptions.width = 512;
+project.windowOptions.height = 512;
 
 resolve(project);
