@@ -21,7 +21,7 @@ class MouseLookSystem implements ISystem {
     }
 
     public function update(transform:Transform, mouseLook:MouseLook) {
-        //if(!Game.state.pointerLocked) return;
+        if(!Game.state.pointerLocked) return;
 
         // smooth the mouse movement so things aren't quite so janky
         mouseLook.smoothX = GLM.lerp(mouseLook.smoothX, Game.state.mouseDeltaX, 1.0 / mouseLook.smoothing);

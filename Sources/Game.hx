@@ -39,9 +39,7 @@ class Game {
             null,
             null
         );
-        kha.SystemImpl.notifyOfMouseLockChange(function() {
-            Game.state.pointerLocked = true;
-        }, function() {
+        kha.SystemImpl.notifyOfMouseLockChange(pointerLockChanged, function() {
             Game.state.pointerLocked = false;
         });
         
@@ -84,6 +82,22 @@ class Game {
     }
 
     public static function lockPointer():Void {
-        kha.SystemImpl.lockMouse();
+        kha.SystemImpl.khanvas.onclick = requestPointerLock;
+    }
+
+    public static function unlockPointer():Void {
+        js.Browser.document.exitPointerLock();
+    }
+
+    static function requestPointerLock():Void {
+        kha.SystemImpl.khanvas.requestPointerLock();
+    }
+
+    static function pointerLockChanged():Void {
+        Game.state.pointerLocked = js.Browser.document.pointerLockElement == kha.SystemImpl.khanvas;
+        if(Game.state.pointerLocked)
+            kha.SystemImpl.khanvas.onclick = null;
+        else
+            kha.SystemImpl.khanvas.onclick = requestPointerLock;
     }
 }
