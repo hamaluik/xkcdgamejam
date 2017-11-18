@@ -97,6 +97,7 @@ class Game {
         updatePhase.add(new systems.VerticalOffsetSystem());
         updatePhase.add(new systems.MouseLookSystem());
         updatePhase.add(new systems.VelocitySystem());
+        updatePhase.add(new systems.BumperSystem());
         updatePhase.add(new systems.CameraZoomSystem());
         updatePhase.add(new systems.MatricesTransform());
         updatePhase.add(new systems.MatricesShadows());

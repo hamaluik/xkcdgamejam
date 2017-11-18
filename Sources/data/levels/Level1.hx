@@ -1,5 +1,6 @@
 package data.levels;
 
+import edge.Entity;
 using glm.Vec3;
 using glm.Quat;
 
@@ -20,7 +21,8 @@ class Level1 implements Level {
             new components.HeadBob(),
             new components.Crouch(),
             new components.Jump(),
-            new components.Film()
+            new components.Film(),
+            new components.Bumper(0.5)
         ]);
 
         Game.engine.create([
@@ -38,10 +40,13 @@ class Level1 implements Level {
         ]);
 
         for(n in Game.resources.forest) {
-            Game.engine.create([
+            var e:Entity = Game.engine.create([
                 new components.Transform(n.pos),
                 new components.MeshRender(n.mesh, n.bunFactor, Game.resources.palette)
             ]);
+            if(n.radius > 0) {
+                e.add(new components.Obstacle(n.radius));
+            }
         }
     }
 

@@ -29,7 +29,7 @@ class Resources {
     public var spruceTree3(default, null):Mesh;
     public var ground(default, null):Mesh;
 
-    public var forest(default, null):Array<{ mesh:Mesh, bunFactor:Vec4, pos:Vec3 }>;
+    public var forest(default, null):Array<{ mesh:Mesh, bunFactor:Vec4, pos:Vec3, radius:Float }>;
 
     function new() {
         palette = Assets.images.palette;
@@ -164,6 +164,21 @@ class Resources {
                     case 'SpruceTree3': spruceTree3;
                     case 'Ground': ground;
                     default: null;
+                },
+                radius: switch(node.mesh.name) {
+                    case 'DeadOak1': 1.0;
+                    case 'DeadOak2': 1.0;
+                    case 'DeadOak3': 1.0;
+                    case 'DeadSpruce1': 1.0;
+                    case 'DeadSpruce2': 1.0;
+                    case 'DeadSpruce3': 1.0;
+                    case 'OakTree1': 1.0;
+                    case 'OakTree2': 1.0;
+                    case 'OakTree3': 1.0;
+                    case 'SpruceTree1': 1.0;
+                    case 'SpruceTree2': 1.0;
+                    case 'SpruceTree3': 1.0;
+                    default: -1.0;
                 }
             };
             if(n.mesh != null) forest.push(n);

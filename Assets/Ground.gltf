@@ -2,10 +2,10 @@
     "accessors" : [
         {
             "bufferView" : 0, 
-            "componentType" : 5121, 
-            "count" : 6, 
+            "componentType" : 5123, 
+            "count" : 480, 
             "max" : [
-                3
+                339
             ], 
             "min" : [
                 0
@@ -15,46 +15,46 @@
         {
             "bufferView" : 1, 
             "componentType" : 5126, 
-            "count" : 4, 
+            "count" : 340, 
             "max" : [
-                50.0, 
-                0.0, 
-                50.0
+                50.118438720703125, 
+                6.180760860443115, 
+                50.118438720703125
             ], 
             "min" : [
-                -50.0, 
+                -50.118438720703125, 
                 0.0, 
-                -50.0
+                -50.118438720703125
             ], 
             "type" : "VEC3"
         }, 
         {
             "bufferView" : 2, 
             "componentType" : 5126, 
-            "count" : 4, 
+            "count" : 340, 
             "max" : [
-                0.0, 
+                0.9951846599578857, 
                 1.0, 
-                -0.0
+                0.9951847195625305
             ], 
             "min" : [
+                -0.9951847791671753, 
                 0.0, 
-                1.0, 
-                -0.0
+                -0.9951846599578857
             ], 
             "type" : "VEC3"
         }, 
         {
             "bufferView" : 3, 
             "componentType" : 5126, 
-            "count" : 4, 
+            "count" : 340, 
             "max" : [
-                0.047768279910087585, 
-                0.11174863576889038
+                0.04952680319547653, 
+                0.11104637384414673
             ], 
             "min" : [
-                0.017134204506874084, 
-                0.08111459016799927
+                0.01537572592496872, 
+                0.07689529657363892
             ], 
             "type" : "VEC2"
         }
@@ -66,32 +66,32 @@
     "bufferViews" : [
         {
             "buffer" : 0, 
-            "byteLength" : 6, 
+            "byteLength" : 960, 
             "byteOffset" : 0, 
             "target" : 34963
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 48, 
-            "byteOffset" : 8, 
+            "byteLength" : 4080, 
+            "byteOffset" : 960, 
             "target" : 34962
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 48, 
-            "byteOffset" : 56, 
+            "byteLength" : 4080, 
+            "byteOffset" : 5040, 
             "target" : 34962
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 32, 
-            "byteOffset" : 104, 
+            "byteLength" : 2720, 
+            "byteOffset" : 9120, 
             "target" : 34962
         }
     ], 
     "buffers" : [
         {
-            "byteLength" : 136, 
+            "byteLength" : 11840, 
             "uri" : "Ground.bin"
         }
     ], 
