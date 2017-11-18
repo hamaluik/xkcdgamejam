@@ -1,14 +1,10 @@
 import kha.System;
 import kha.math.Random;
 import kha.Framebuffer;
+import kha.input.Mouse;
 import edge.Engine;
 import edge.Phase;
-import glm.GLM;
-using glm.Mat4;
-using glm.Quat;
-using glm.Vec4;
-using glm.Vec3;
-using glm.Vec2;
+import data.Level;
 
 @:allow(Main)
 class Game {
@@ -21,10 +17,33 @@ class Game {
     public static var random(default, null):Random;
     public static var resources(default, null):Resources;
 
+    public static var currentLevel:Int = 0;
+    public static var levels(default, null):Array<Level> = [
+        new data.levels.Level1()
+    ];
+
     static function initialize():Void {
         // TODO: new seed each time
         random = new Random(0);
         resources = new Resources();
+
+        Mouse.get(0).notify(
+            function(b, x, y) { if(b == 0) state.mouseDown = true; },
+            function(b, x, y) { if(b == 0) state.mouseDown = false; },
+            function(x:Int, y:Int, mx:Int, my:Int):Void {
+                state.mouseX = x;
+                state.mouseY = y;
+                state.mouseDeltaX = mx;
+                state.mouseDeltaY = my;
+            },
+            null,
+            null
+        );
+        kha.SystemImpl.notifyOfMouseLockChange(function() {
+            Game.state.pointerLocked = true;
+        }, function() {
+            Game.state.pointerLocked = false;
+        });
         
         // TODO: input functions
 
@@ -32,10 +51,14 @@ class Game {
 
 		engine = new Engine();
         updatePhase = engine.createPhase();
-        // TODO: add update systems
+        updatePhase.add(new systems.MouseLookSystem());
+        updatePhase.add(new systems.MatricesTransform());
+        updatePhase.add(new systems.MatricesCamera());
 
         renderPhase = engine.createPhase();
-        // TODO: add render systems
+        renderPhase.add(new systems.Render());
+
+        levels[currentLevel].load();
 
         state.time = kha.Scheduler.time();
     }
@@ -48,14 +71,19 @@ class Game {
 		state.dt_variable = time - state.time;
 		state.time = time;
 
-        // TODO: process input
-
 		updatePhase.update(0);
+
+        state.mouseDeltaX = 0;
+        state.mouseDeltaY = 0;
     }
 
     static function render(fb:Framebuffer):Void {
 		state.g2 = fb.g2;
 		state.g4 = fb.g4;
 		renderPhase.update(0);
+    }
+
+    public static function lockPointer():Void {
+        kha.SystemImpl.lockMouse();
     }
 }

@@ -61,7 +61,7 @@ class Mesh {
         return new Mesh(
             mesh.getFloatAttributeValues("POSITION"),
             mesh.getFloatAttributeValues("NORMAL"),
-            mesh.getFloatAttributeValues("TEXCOORD_9"),
+            mesh.getFloatAttributeValues("TEXCOORD_0"),
             mesh.getIndexValues()
         );
     }
