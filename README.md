@@ -26,6 +26,11 @@ https://itch.io/jam/xkcdgamejam
   + Fight angels on your way to the big guy
 * [Geologist](https://xkcd.com/1198/): hunt rare rocks and mount them on your wall
 
+## Chosen Idea
+
+* [Bun](https://xkcd.com/1682/): take pictures of buns, searching for a glimpse of the _King Bun_
+  + Like Pokémon Snap, but with buns
+
 ## Asset Credits
 
 * "[Rabbit](https://poly.google.com/view/dyeBDJxhDwP)" by [Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)

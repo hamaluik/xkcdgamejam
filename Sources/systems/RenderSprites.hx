@@ -3,21 +3,20 @@ package systems;
 import kha.System;
 import kha.Color;
 import edge.ISystem;
-import components.IntroSprite;
+import components.Sprite;
 
-class RenderIntro implements ISystem {
+class RenderSprites implements ISystem {
     public function new() {}
 
     public function before() {
         Game.state.g2.begin(true, Color.Black);
     }
 
-    public function update(s:IntroSprite) {
-        var ww:Float = System.windowWidth(); var wh:Float = System.windowHeight();
+    public function update(s:Sprite) {
         var g = Game.state.g2;
 
         g.color = Color.White;
-        g.drawImage(s.image, (ww - s.image.width) / 2, (wh - s.image.height) / 2);
+        g.drawImage(s.image, s.pos.x, s.pos.y);
     }
 
     public function after() {

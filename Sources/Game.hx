@@ -25,7 +25,8 @@ class Game {
     public static var currentLevel:Int = 1;
     public static var levels(default, null):Array<Level> = [
         new data.levels.Level0(),
-        new data.levels.Level1()
+        new data.levels.Level1(),
+        new data.levels.Level2()
     ];
 
     public static function changeLevel(nextLevel:Int):Void {

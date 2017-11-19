@@ -101,6 +101,21 @@ class Level1 implements Level {
             new components.AudioSource(Game.resources.ambience, true)
         ]);
 
+        Game.engine.create([
+            new components.LevelSwitch(2, Settings.minDaylightTime + Settings.darkenTime)
+        ]);
+
+        Game.engine.create([
+            new components.DialogOverlay("It's getting late...", 0.25, 3, 0.25)
+        ]);
+        Game.engine.create([
+            new components.DialogOverlay("I need to make sure to capture some buns before it gets dark!", 0.25+3+0.5, 3, 0.25)
+        ]);
+        Game.engine.create([
+            new components.DialogOverlay("There's gotta be *some* around here somewhere!", 0.25+3+0.5+3+0.5, 3, 0.25)
+        ]);
+
+        Game.updatePhase.add(new systems.LevelSwitcher());
         Game.updatePhase.add(new systems.AudioPlayer());
         Game.updatePhase.add(new systems.FPSMovementSystem());
         Game.updatePhase.add(new systems.CrouchSystem());
@@ -117,15 +132,30 @@ class Level1 implements Level {
         Game.updatePhase.add(new systems.PictureTakingSystem());
         Game.updatePhase.add(new systems.LightDarkenSystem());
         Game.updatePhase.add(new systems.ShotDisplaySystem());
+        Game.updatePhase.add(new systems.DialogDisplaySystem());
         
         Game.renderPhase.add(new systems.RenderShadows());
         Game.renderPhase.add(new systems.Render());
         Game.renderPhase.add(new systems.RenderPostProcessing());
         Game.renderPhase.add(new systems.RenderHUDSystem());
+
+        Main.hideLoading();
     }
 
     public function unload():Void {
-        // TODO:
+        trace('going to post-action');
+        // store the buns!
+        Level2.buns = components.Bun.buns;
+        for(entity in Game.engine.entities()) {
+            if(entity.existsType(components.Film)) {
+                Level2.film = entity.get(components.Film);
+            }
+        }
+
+        Game.unlockPointer();
+        Game.renderPhase.clearSystems();
+        Game.updatePhase.clearSystems();
+        Game.engine.clear();
     }
 
     public function pause():Void {

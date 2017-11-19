@@ -27,8 +27,8 @@ class MouseLookSystem implements ISystem {
         mouseLook.smoothX = GLM.lerp(mouseLook.smoothX, Game.state.mouseDeltaX, 1.0 / Settings.mouseSmoothing);
         mouseLook.smoothY = GLM.lerp(mouseLook.smoothY, Game.state.mouseDeltaY, 1.0 / Settings.mouseSmoothing);
 
-        mouseLook.direction -= mouseLook.smoothX * Settings.mouseSensitivity * Game.state.dt_variable;
-        mouseLook.elevation -= mouseLook.smoothY * Settings.mouseSensitivity * Game.state.dt_variable;        
+        mouseLook.direction -= mouseLook.smoothX * Settings.mouseSensitivity * Game.state.dt_fixed;
+        mouseLook.elevation -= mouseLook.smoothY * Settings.mouseSensitivity * Game.state.dt_fixed;        
 
         while(mouseLook.direction > 2 * Math.PI)
             mouseLook.direction -= 2 * Math.PI;

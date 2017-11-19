@@ -15,8 +15,11 @@ class Resources {
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
     public var muteIcon(default, null):Image;
+    public var camFont(default, null):Font;
+    public var xkcdFont(default, null):Font;
     public var font(default, null):Font;
     public var ambience(default, null):Sound;
+    public var teacher(default, null):Image;
 
     public var bun1(default, null):Mesh;
     public var bun2(default, null):Mesh;
@@ -43,8 +46,10 @@ class Resources {
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
         muteIcon = Assets.images.mute;
-        font = Assets.fonts.Targa;
+        camFont = Assets.fonts.Targa;
+        xkcdFont = Assets.fonts.xkcd;
         ambience = Assets.sounds._288899__petebuchwald__rocky_mountain_outdoors_wind_and_birds;
+        teacher = Assets.images.teacher;
 
         var Bun1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.Bun1_gltf.toString(),

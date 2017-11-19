@@ -57,7 +57,7 @@ class RenderShadows implements ISystem {
     }
 
     function update(ss:SunShadow, t:Transform) {
-        if(ss.rendered) return;
+        //if(ss.rendered) return;
 
         var g = ss.image.g4;
         //var g = Game.state.g4;
