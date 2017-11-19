@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Bun Snap</title>
+	<style>
+		body {
+			margin: 0;
+			background: black;
+			color: white;
+			font-family: Sans-Serif;
+		}
+		canvas {
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			width: 640px;
+		}
+		#loading {
+			padding: 0;
+			margin: 0 auto;
+			width: 640px;
+			height: 480px;
+			display: grid;
+		}
+		#loading > span {
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="loading"><span>Loading...</span></div>
+	<canvas id="khanvas" width="640" height="480"></canvas>
+	<script>
+		navigator.getVRDisplays = false;
+	</script>
+	<script src="kha.js"></script>
+</body>
+</html>
