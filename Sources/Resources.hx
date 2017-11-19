@@ -4,13 +4,16 @@ import kha.Font;
 import kha.Sound;
 import gltf.GLTF;
 import types.Mesh;
+import glm.Quat;
 import glm.Vec4;
 import glm.Vec3;
+using StringTools;
 
 @:allow(Game)
 class Resources {
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
+    public var muteIcon(default, null):Image;
     public var font(default, null):Font;
     public var ambience(default, null):Sound;
 
@@ -31,11 +34,13 @@ class Resources {
     public var spruceTree3(default, null):Mesh;
     public var ground(default, null):Mesh;
 
-    public var forest(default, null):Array<{ mesh:Mesh, bunFactor:Vec4, pos:Vec3, radius:Float }>;
+    public var forest(default, null):Array<{ mesh:Mesh, pos:Vec3, rot:Quat, radius:Float }>;
+    public var bunSpawns(default, null):Array<{ pos:Vec3, rot:Quat }>;
 
     function new() {
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
+        muteIcon = Assets.images.mute;
         font = Assets.fonts.Targa;
         ambience = Assets.sounds._288899__petebuchwald__rocky_mountain_outdoors_wind_and_birds;
 
@@ -139,52 +144,52 @@ class Resources {
             Assets.blobs.Forest_gltf.toString(), []
         );
         forest = [];
+        bunSpawns = [];
         for(node in Forest_g.defaultScene.nodes) {
-            if(node.mesh == null) continue;
-            var n = {
-                pos: node.translation == null ? new Vec3() : new Vec3(node.translation[0], node.translation[1], node.translation[2]),
-                bunFactor: switch(node.mesh.name) {
-                    case 'Bun1': new Vec4(1, 0, 0, 1);
-                    case 'Bun2': new Vec4(0, 1, 0, 1);
-                    case 'BunKing': new Vec4(0, 0, 1, 1);
-                    default: new Vec4(0, 0, 0, 1);
-                },
-                mesh: switch(node.mesh.name) {
-                    case 'Bun1': bun1;
-                    case 'Bun2': bun2;
-                    case 'BunKing': bunKing;
-                    case 'DeadOak1': deadOak1;
-                    case 'DeadOak2': deadOak2;
-                    case 'DeadOak3': deadOak3;
-                    case 'DeadSpruce1': deadSpruce1;
-                    case 'DeadSpruce2': deadSpruce2;
-                    case 'DeadSpruce3': deadSpruce3;
-                    case 'OakTree1': oakTree1;
-                    case 'OakTree2': oakTree2;
-                    case 'OakTree3': oakTree3;
-                    case 'SpruceTree1': spruceTree1;
-                    case 'SpruceTree2': spruceTree2;
-                    case 'SpruceTree3': spruceTree3;
-                    case 'Ground': ground;
-                    default: null;
-                },
-                radius: switch(node.mesh.name) {
-                    case 'DeadOak1': 1.0;
-                    case 'DeadOak2': 1.0;
-                    case 'DeadOak3': 1.0;
-                    case 'DeadSpruce1': 1.0;
-                    case 'DeadSpruce2': 1.0;
-                    case 'DeadSpruce3': 1.0;
-                    case 'OakTree1': 1.0;
-                    case 'OakTree2': 1.0;
-                    case 'OakTree3': 1.0;
-                    case 'SpruceTree1': 1.0;
-                    case 'SpruceTree2': 1.0;
-                    case 'SpruceTree3': 1.0;
-                    default: -1.0;
-                }
-            };
-            if(n.mesh != null) forest.push(n);
+            if(node.mesh == null && node.name != null && node.name.startsWith("BunSpawn")) {
+                bunSpawns.push({
+                    pos: node.translation == null ? new Vec3() : new Vec3(node.translation[0], node.translation[1], node.translation[2]),
+                    rot: node.rotation == null ? Quat.identity(new Quat()) : new Quat(node.rotation[0], node.rotation[1], node.rotation[2], node.rotation[3])
+                });
+            }
+            else if(node.mesh != null) {
+                var n = {
+                    pos: node.translation == null ? new Vec3() : new Vec3(node.translation[0], node.translation[1], node.translation[2]),
+                    rot: node.rotation == null ? Quat.identity(new Quat()) : new Quat(node.rotation[0], node.rotation[1], node.rotation[2], node.rotation[3]),
+                    mesh: switch(node.mesh.name) {
+                        case 'DeadOak1': deadOak1;
+                        case 'DeadOak2': deadOak2;
+                        case 'DeadOak3': deadOak3;
+                        case 'DeadSpruce1': deadSpruce1;
+                        case 'DeadSpruce2': deadSpruce2;
+                        case 'DeadSpruce3': deadSpruce3;
+                        case 'OakTree1': oakTree1;
+                        case 'OakTree2': oakTree2;
+                        case 'OakTree3': oakTree3;
+                        case 'SpruceTree1': spruceTree1;
+                        case 'SpruceTree2': spruceTree2;
+                        case 'SpruceTree3': spruceTree3;
+                        case 'Ground': ground;
+                        default: null;
+                    },
+                    radius: switch(node.mesh.name) {
+                        case 'DeadOak1': 1.0;
+                        case 'DeadOak2': 1.0;
+                        case 'DeadOak3': 1.0;
+                        case 'DeadSpruce1': 1.0;
+                        case 'DeadSpruce2': 1.0;
+                        case 'DeadSpruce3': 1.0;
+                        case 'OakTree1': 1.0;
+                        case 'OakTree2': 1.0;
+                        case 'OakTree3': 1.0;
+                        case 'SpruceTree1': 1.0;
+                        case 'SpruceTree2': 1.0;
+                        case 'SpruceTree3': 1.0;
+                        default: -1.0;
+                    }
+                };
+                if(n.mesh != null) forest.push(n);
+            }
         }
     }
 }

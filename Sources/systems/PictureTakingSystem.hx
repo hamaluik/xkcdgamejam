@@ -23,6 +23,7 @@ import components.Film;
 import utils.FloatTools;
 import types.SnapShot;
 import haxe.io.Bytes;
+import haxe.ds.IntMap;
 using glm.Mat4;
 
 class PictureTakingSystem implements ISystem {
@@ -135,15 +136,27 @@ class PictureTakingSystem implements ISystem {
             g.drawIndexedVertices();
         }
 
-        // analyze the result
-        var numRed:Int = 0; var numGreen:Int = 0; var numBlue:Int = 0;
+        // calculate the result
+        var results:IntMap<Int> = new IntMap<Int>();
         var pixelData:Bytes = detectorImage.getPixels();
         for(i in 0...(detectorImage.width * detectorImage.height)) {
             var colour:Color = pixelData.getInt32(i * 4);
-            if(colour.Rb == 255) numRed++;
-            if(colour.Gb == 255) numGreen++;
-            if(colour.Bb == 255) numBlue++;
+            if(colour.Rb != 0 && colour.Gb != 0) {
+                // found a bun!
+                if(!results.exists(colour.Bb)) {
+                    results.set(colour.Bb, 0);
+                }
+                results.set(colour.Bb, results.get(colour.Bb) + 1);
+            }
         }
-        js.Browser.console.log('Bun Report:', numRed, numGreen, numBlue);
+        // TODO: store bun alignment
+
+        // store the results!
+        snapShot.results = results;
+
+        js.Browser.console.log('Bun report:');
+        for(key in results.keys()) {
+            js.Browser.console.log('  bun[${key}] => ${results.get(key)}');
+        }
     }
 }

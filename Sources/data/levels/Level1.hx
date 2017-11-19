@@ -1,8 +1,11 @@
 package data.levels;
 
 import edge.Entity;
+import types.TBun;
+using glm.Vec4;
 using glm.Vec3;
 using glm.Quat;
+using utils.ArrayTools;
 
 class Level1 implements Level {
     public function new() {}
@@ -33,7 +36,7 @@ class Level1 implements Level {
                 new Vec3(1, 1, 1)
             ),
             new components.LightAmbient(
-                new Vec3(0.025, 0.025, 0.025)
+                new Vec3(0.1, 0.1, 0.1)
             ),
             new components.SunShadow(),
             new components.Transform(
@@ -43,16 +46,57 @@ class Level1 implements Level {
             )
         ]);
 
+        var noBunFactor:Vec4 = new Vec4(0, 0, 0, 1);
         for(n in Game.resources.forest) {
             var e:Entity = Game.engine.create([
-                new components.Transform(false, n.pos),
-                new components.MeshRender(n.mesh, n.bunFactor, Game.resources.palette)
+                new components.Transform(false, n.pos, n.rot),
+                new components.MeshRender(n.mesh, noBunFactor, Game.resources.palette)
             ]);
             if(n.radius > 0) {
                 e.add(new components.Obstacle(n.radius));
             }
         }
 
+        // spawn Settings.numBuns bunnies, the first being the king which should be the furthest away
+        var actualSpawns:Array<{ pos:Vec3, rot:Quat }> = Game.resources.bunSpawns.shuffle().slice(0, Settings.numBuns);
+        actualSpawns.sort(function(a, b):Int {
+            var amag:Float = a.pos.lengthSquared();
+            var bmag:Float = b.pos.lengthSquared();
+            if(amag > bmag) return -1;
+            else if(amag < bmag) return 1;
+            return 0;
+        });
+        var kingSpawned:Bool = false;
+        for(s in actualSpawns) {
+            var size:Float = Game.random.GetFloatIn(Settings.minBunSize, Settings.maxBunSize);
+            var itype:Int = kingSpawned? Game.random.GetIn(0, 1) : 2;
+            var type:TBun = switch(itype) {
+                case 1: Brown;
+                case 2: King;
+                case _: White;
+            }
+            var bunID:Vec4 = new Vec4(components.Bun._nextID / 255, 1, 1, 1);
+            if(type.match(King)) {
+                size = Settings.kingBunSize;
+                kingSpawned = true;
+            }
+
+            Game.engine.create([
+                new components.Transform(false, s.pos, s.rot, new Vec3(size, size, size)),
+                new components.MeshRender(switch(type) {
+                    case TBun.White: Game.resources.bun1;
+                    case TBun.Brown: Game.resources.bun2;
+                    case TBun.King: Game.resources.bunKing;
+                }, bunID, Game.resources.palette),
+                new components.Bun(size, type)
+            ]);
+        }
+
+        Game.engine.create([
+            new components.AudioSource(Game.resources.ambience, true)
+        ]);
+
+        Game.updatePhase.add(new systems.AudioPlayer());
         Game.updatePhase.add(new systems.FPSMovementSystem());
         Game.updatePhase.add(new systems.CrouchSystem());
         Game.updatePhase.add(new systems.JumpSystem());
@@ -71,8 +115,6 @@ class Level1 implements Level {
         Game.renderPhase.add(new systems.Render());
         Game.renderPhase.add(new systems.RenderPostProcessing());
         Game.renderPhase.add(new systems.RenderHUDSystem());
-
-        ambience = kha.audio1.Audio.play(Game.resources.ambience, true);
     }
 
     public function unload():Void {

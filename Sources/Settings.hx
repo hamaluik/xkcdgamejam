@@ -13,4 +13,8 @@ class Settings {
     public static var headBobFrequency:Float = 0.25;
     public static var jumpGravity:Float = 20;
     public static var jumpSpeed:Float = 5;
+    public static var numBuns:Int = 6;
+    public static var kingBunSize:Float = 0.25;
+    public static var minBunSize:Float = 0.5;
+    public static var maxBunSize:Float = 2.0;
 }

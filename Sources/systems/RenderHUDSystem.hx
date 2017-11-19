@@ -26,7 +26,11 @@ class RenderHUDSystem implements ISystem {
         g.font = Game.resources.font;
         g.fontSize = 32;
         var shotsLeft:Int = 12 - shotsTaken;
-        g.drawString((shotsLeft < 10 ? '0' : '') + '${shotsLeft}/${shotsTotal}', 525, 428);
+        g.drawString((shotsLeft < 10 ? '0' : '') + '${shotsLeft}/${shotsTotal}', 570, 430);
+
+        if(Game.mute) {
+            g.drawImage(Game.resources.muteIcon, 10, 4);
+        }
 
         /*if(shotsTaken > 0) {
             g.color = Color.White;

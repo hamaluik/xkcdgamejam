@@ -96,7 +96,7 @@ class RenderPostProcessing implements ISystem {
         g.clear(bg, 1);
         g.setPipeline(postPipeline);
         
-        g.setFloat4(paramsID, s.flash, s.transition, 0, 0);
+        g.setFloat4(paramsID, s.flash, /*s.transition*/1.0, 0, 0); // TODO: always desaturate?
         g.setFloat2(resolutionID, Game.state.w, Game.state.h);
         g.setTexture(texID, cam.renderBuffer);
 
@@ -105,7 +105,7 @@ class RenderPostProcessing implements ISystem {
         g.drawIndexedVertices();
 
         // also render any shots!
-        /*for(shot in shots) {
+        for(shot in shots) {
             g = shot.data.shot.target.photo.g4;
             g.begin();
             g.clear(bg, 1);
@@ -121,6 +121,6 @@ class RenderPostProcessing implements ISystem {
 
             // delete the shot now that we've taken it
             shot.entity.remove(shot.data.shot);
-        }*/
+        }
     }
 }

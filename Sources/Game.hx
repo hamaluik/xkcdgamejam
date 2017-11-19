@@ -19,6 +19,8 @@ class Game {
     public static var random(default, null):Random;
     public static var resources(default, null):Resources;
 
+    public static var mute(default, null):Bool = true; // TODO: make false for release!
+
     public static var currentLevel:Int = 0;
     public static var levels(default, null):Array<Level> = [
         new data.levels.Level1()
@@ -64,6 +66,7 @@ class Game {
                         state.jumpDown = true;
                         state.jumpPressed = true;
                     }
+                    case M: mute = !mute;
                     default:
                 }
             },
