@@ -25,3 +25,9 @@ https://itch.io/jam/xkcdgamejam
   + Fighting game
   + Fight angels on your way to the big guy
 * [Geologist](https://xkcd.com/1198/): hunt rare rocks and mount them on your wall
+
+## Asset Credits
+
+* "[Rabbit](https://poly.google.com/view/dyeBDJxhDwP)" by [Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+* "[Rocky Mountain Outdoors: wind and birds](https://freesound.org/people/petebuchwald/sounds/288899/)" by [Pete Buchwald](http://www.petebuchwald.com/) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+* "[Low Poly Forest Pack](https://jaks.itch.io/lowpolyforestpack)" by [Jaks](https://jaks.itch.io/)
