@@ -8,6 +8,7 @@ in vec4 shadowPos;
 uniform vec3 lightDirection;
 uniform vec3 lightColour;
 uniform vec3 ambientColour;
+uniform vec3 boundaryColour;
 uniform sampler2D tex;
 uniform sampler2D shadowMap;
 uniform float shadowBias;
@@ -63,8 +64,8 @@ void main() {
     vec3 light = lightColour * dLight0 * visibility + ambientColour;
 
     vec3 colour = texture(tex, uv).rgb * light;
-    float boundaryFactor = smoothstep(46, 50, length(pos.xz));
-    colour = mix(colour, vec3(0.37254901960784315, 0.3411764705882353, 0.30980392156862746), boundaryFactor);
+    float boundaryFactor = smoothstep(46, 49, length(pos.xz));
+    colour = mix(colour, boundaryColour, boundaryFactor);
     
     fragColour = vec4(colour, 1.0);
 }

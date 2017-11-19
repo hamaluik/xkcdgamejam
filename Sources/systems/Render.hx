@@ -18,6 +18,7 @@ import components.Transform;
 import components.LightDirection;
 import components.LightAmbient;
 import components.SunShadow;
+import components.LightDarken;
 import types.Mesh;
 using glm.Mat4;
 using glm.Vec4;
@@ -28,6 +29,7 @@ class Render implements ISystem {
     var directionalLights:View<{l:LightDirection}>;
     var ambientLights:View<{l:LightAmbient}>;
     var sunShadows:View<{ss:SunShadow}>;
+    var lightDarkens:View<{ld:LightDarken}>;
 
 	var standardPipeline:PipelineState;
 	var mvpID:ConstantLocation;
@@ -39,8 +41,9 @@ class Render implements ISystem {
     var shadowMVPID:ConstantLocation;
     var shadowMapID:TextureUnit;
     var shadowBiasID:ConstantLocation;
+    var boundaryColourID:ConstantLocation;
 
-    var bg:Color = Color.fromFloats(0, 0, 0, 0);
+    var bg:Color = Color.fromBytes(41, 173, 255);
     var mvp:Mat4;
     var lightDirection:Vec3;
     var lightColour:Vec3;
@@ -88,14 +91,25 @@ class Render implements ISystem {
 		shadowMVPID = standardPipeline.getConstantLocation("shadowMVP");
 		shadowMapID = standardPipeline.getTextureUnit("shadowMap");
 		shadowBiasID = standardPipeline.getConstantLocation("shadowBias");
+		boundaryColourID = standardPipeline.getConstantLocation("boundaryColour");
     }
 
     function update(cam:Camera, t:Transform) {
+        var lightScale:Float = 1;
+        for(d in lightDarkens) {
+            if(d.data.ld.lightScale < lightScale) {
+                lightScale = d.data.ld.lightScale;
+            }
+        }
+        var clearColour:Color = Color.fromFloats(bg.R * lightScale, bg.G * lightScale, bg.B * lightScale, 1);
+
         //var g = Game.state.g4;
         var g = cam.renderBuffer.g4;
         g.begin();
-        g.clear(bg, 1);
+        g.clear(clearColour, 1);
         g.setPipeline(standardPipeline);
+
+        g.setFloat3(boundaryColourID, bg.R * lightScale, bg.G * lightScale, bg.B * lightScale);
 
         // lights!
         for(light in directionalLights) {
@@ -105,6 +119,8 @@ class Render implements ISystem {
         for(light in ambientLights) {
             light.data.l.colour.copy(ambientColour);
         }
+        lightColour.multiplyScalar(lightScale, lightColour);
+        ambientColour.multiplyScalar(lightScale, ambientColour);
         g.setVector3(lightDirectionID, lightDirection);
         g.setVector3(lightColourID, lightColour);
         g.setVector3(ambientColourID, ambientColour);

@@ -33,7 +33,7 @@ class Level1 implements Level {
 
         Game.engine.create([
             new components.LightDirection(
-                new Vec3(1, 1, 1)
+                new Vec3(1.5, 1.5, 1.5)
             ),
             new components.LightAmbient(
                 new Vec3(0.1, 0.1, 0.1)
@@ -41,9 +41,14 @@ class Level1 implements Level {
             new components.SunShadow(),
             new components.Transform(
                 false,
+                // TODO: fix placement and angle to get shadows working nicely
                 new Vec3(0, 30, 0),
-                Quat.fromEuler(-Math.PI/4, 0, 0, new Quat())
+                Quat.fromEuler(-Math.PI/2, 0, 0, new Quat())
             )
+        ]);
+
+        Game.engine.create([
+            new components.LightDarken()
         ]);
 
         var noBunFactor:Vec4 = new Vec4(0, 0, 0, 1);
@@ -110,6 +115,7 @@ class Level1 implements Level {
         Game.updatePhase.add(new systems.MatricesShadows());
         Game.updatePhase.add(new systems.MatricesCamera());
         Game.updatePhase.add(new systems.PictureTakingSystem());
+        Game.updatePhase.add(new systems.LightDarkenSystem());
         
         Game.renderPhase.add(new systems.RenderShadows());
         Game.renderPhase.add(new systems.Render());
