@@ -39,6 +39,38 @@ class Resources {
     public var spruceTree3(default, null):Mesh;
     public var ground(default, null):Mesh;
 
+    public var BigRock1(default, null):Mesh;
+    public var BigRock2(default, null):Mesh;
+    public var BigRock3(default, null):Mesh;
+    public var BigRock4(default, null):Mesh;
+    public var BigRock5(default, null):Mesh;
+
+    public var Rock1(default, null):Mesh;
+    public var Rock2(default, null):Mesh;
+    public var Rock3(default, null):Mesh;
+    public var Rock4(default, null):Mesh;
+    public var Rock5(default, null):Mesh;
+    public var Rock6(default, null):Mesh;
+    public var Rock7(default, null):Mesh;
+    public var Rock8(default, null):Mesh;
+    public var Rock9(default, null):Mesh;
+    public var Rock_10(default, null):Mesh;
+    public var Rock_11(default, null):Mesh;
+    public var Rock_12(default, null):Mesh;
+    public var Rock_13(default, null):Mesh;
+    public var Rock_14(default, null):Mesh;
+    public var Rock_15(default, null):Mesh;
+    public var Rock_16(default, null):Mesh;
+    public var Rock_17(default, null):Mesh;
+    public var Rock_18(default, null):Mesh;
+    public var Rock_19(default, null):Mesh;
+    public var Rock_20(default, null):Mesh;
+    public var Rock_21(default, null):Mesh;
+    public var Rock_22(default, null):Mesh;
+    public var Rock_23(default, null):Mesh;
+    public var Rock_24(default, null):Mesh;
+    public var Rock_25(default, null):Mesh;
+
     public var forest(default, null):Array<{ mesh:Mesh, pos:Vec3, rot:Quat, radius:Float }>;
     public var bunSpawns(default, null):Array<{ pos:Vec3, rot:Quat }>;
 
@@ -143,6 +175,186 @@ class Resources {
         );
         spruceTree3 = Mesh.fromGLTFPrimitive(SpruceTree3_g.meshes[0].primitives[0]);
 
+        var BigRock1_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BigRock1_gltf.toString(),
+            [Assets.blobs.BigRock1_bin.bytes]
+        );
+        BigRock1 = Mesh.fromGLTFPrimitive(BigRock1_g.meshes[0].primitives[0]);
+
+        var BigRock2_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BigRock2_gltf.toString(),
+            [Assets.blobs.BigRock2_bin.bytes]
+        );
+        BigRock2 = Mesh.fromGLTFPrimitive(BigRock2_g.meshes[0].primitives[0]);
+
+        var BigRock3_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BigRock3_gltf.toString(),
+            [Assets.blobs.BigRock3_bin.bytes]
+        );
+        BigRock3 = Mesh.fromGLTFPrimitive(BigRock3_g.meshes[0].primitives[0]);
+
+        var BigRock4_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BigRock4_gltf.toString(),
+            [Assets.blobs.BigRock4_bin.bytes]
+        );
+        BigRock4 = Mesh.fromGLTFPrimitive(BigRock4_g.meshes[0].primitives[0]);
+
+        var BigRock5_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.BigRock5_gltf.toString(),
+            [Assets.blobs.BigRock5_bin.bytes]
+        );
+        BigRock5 = Mesh.fromGLTFPrimitive(BigRock5_g.meshes[0].primitives[0]);
+
+        var Rock1_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock1_gltf.toString(),
+            [Assets.blobs.Rock1_bin.bytes]
+        );
+        Rock1 = Mesh.fromGLTFPrimitive(Rock1_g.meshes[0].primitives[0]);
+
+        var Rock2_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock2_gltf.toString(),
+            [Assets.blobs.Rock2_bin.bytes]
+        );
+        Rock2 = Mesh.fromGLTFPrimitive(Rock2_g.meshes[0].primitives[0]);
+
+        var Rock3_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock3_gltf.toString(),
+            [Assets.blobs.Rock3_bin.bytes]
+        );
+        Rock3 = Mesh.fromGLTFPrimitive(Rock3_g.meshes[0].primitives[0]);
+
+        var Rock4_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock4_gltf.toString(),
+            [Assets.blobs.Rock4_bin.bytes]
+        );
+        Rock4 = Mesh.fromGLTFPrimitive(Rock4_g.meshes[0].primitives[0]);
+
+        var Rock5_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock5_gltf.toString(),
+            [Assets.blobs.Rock5_bin.bytes]
+        );
+        Rock5 = Mesh.fromGLTFPrimitive(Rock5_g.meshes[0].primitives[0]);
+
+        var Rock6_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock6_gltf.toString(),
+            [Assets.blobs.Rock6_bin.bytes]
+        );
+        Rock6 = Mesh.fromGLTFPrimitive(Rock6_g.meshes[0].primitives[0]);
+
+        var Rock7_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock7_gltf.toString(),
+            [Assets.blobs.Rock7_bin.bytes]
+        );
+        Rock7 = Mesh.fromGLTFPrimitive(Rock7_g.meshes[0].primitives[0]);
+
+        var Rock8_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock8_gltf.toString(),
+            [Assets.blobs.Rock8_bin.bytes]
+        );
+        Rock8 = Mesh.fromGLTFPrimitive(Rock8_g.meshes[0].primitives[0]);
+
+        var Rock9_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock9_gltf.toString(),
+            [Assets.blobs.Rock9_bin.bytes]
+        );
+        Rock9 = Mesh.fromGLTFPrimitive(Rock9_g.meshes[0].primitives[0]);
+
+        var Rock_10_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_10_gltf.toString(),
+            [Assets.blobs.Rock_10_bin.bytes]
+        );
+        Rock_10 = Mesh.fromGLTFPrimitive(Rock_10_g.meshes[0].primitives[0]);
+
+        var Rock_11_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_11_gltf.toString(),
+            [Assets.blobs.Rock_11_bin.bytes]
+        );
+        Rock_11 = Mesh.fromGLTFPrimitive(Rock_11_g.meshes[0].primitives[0]);
+
+        var Rock_12_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_12_gltf.toString(),
+            [Assets.blobs.Rock_12_bin.bytes]
+        );
+        Rock_12 = Mesh.fromGLTFPrimitive(Rock_12_g.meshes[0].primitives[0]);
+
+        var Rock_13_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_13_gltf.toString(),
+            [Assets.blobs.Rock_13_bin.bytes]
+        );
+        Rock_13 = Mesh.fromGLTFPrimitive(Rock_13_g.meshes[0].primitives[0]);
+
+        var Rock_14_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_14_gltf.toString(),
+            [Assets.blobs.Rock_14_bin.bytes]
+        );
+        Rock_14 = Mesh.fromGLTFPrimitive(Rock_14_g.meshes[0].primitives[0]);
+
+        var Rock_15_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_15_gltf.toString(),
+            [Assets.blobs.Rock_15_bin.bytes]
+        );
+        Rock_15 = Mesh.fromGLTFPrimitive(Rock_15_g.meshes[0].primitives[0]);
+
+        var Rock_16_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_16_gltf.toString(),
+            [Assets.blobs.Rock_16_bin.bytes]
+        );
+        Rock_16 = Mesh.fromGLTFPrimitive(Rock_16_g.meshes[0].primitives[0]);
+
+        var Rock_17_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_17_gltf.toString(),
+            [Assets.blobs.Rock_17_bin.bytes]
+        );
+        Rock_17 = Mesh.fromGLTFPrimitive(Rock_17_g.meshes[0].primitives[0]);
+
+        var Rock_18_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_18_gltf.toString(),
+            [Assets.blobs.Rock_18_bin.bytes]
+        );
+        Rock_18 = Mesh.fromGLTFPrimitive(Rock_18_g.meshes[0].primitives[0]);
+
+        var Rock_19_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_19_gltf.toString(),
+            [Assets.blobs.Rock_19_bin.bytes]
+        );
+        Rock_19 = Mesh.fromGLTFPrimitive(Rock_19_g.meshes[0].primitives[0]);
+
+        var Rock_20_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_20_gltf.toString(),
+            [Assets.blobs.Rock_20_bin.bytes]
+        );
+        Rock_20 = Mesh.fromGLTFPrimitive(Rock_20_g.meshes[0].primitives[0]);
+
+        var Rock_21_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_21_gltf.toString(),
+            [Assets.blobs.Rock_21_bin.bytes]
+        );
+        Rock_21 = Mesh.fromGLTFPrimitive(Rock_21_g.meshes[0].primitives[0]);
+
+        var Rock_22_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_22_gltf.toString(),
+            [Assets.blobs.Rock_22_bin.bytes]
+        );
+        Rock_22 = Mesh.fromGLTFPrimitive(Rock_22_g.meshes[0].primitives[0]);
+
+        var Rock_23_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_23_gltf.toString(),
+            [Assets.blobs.Rock_23_bin.bytes]
+        );
+        Rock_23 = Mesh.fromGLTFPrimitive(Rock_23_g.meshes[0].primitives[0]);
+
+        var Rock_24_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_24_gltf.toString(),
+            [Assets.blobs.Rock_24_bin.bytes]
+        );
+        Rock_24 = Mesh.fromGLTFPrimitive(Rock_24_g.meshes[0].primitives[0]);
+
+        var Rock_25_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Rock_25_gltf.toString(),
+            [Assets.blobs.Rock_25_bin.bytes]
+        );
+        Rock_25 = Mesh.fromGLTFPrimitive(Rock_25_g.meshes[0].primitives[0]);
+
         var Ground_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.Ground_gltf.toString(),
             [Assets.blobs.Ground_bin.bytes]
@@ -178,6 +390,36 @@ class Resources {
                         case 'SpruceTree1': spruceTree1;
                         case 'SpruceTree2': spruceTree2;
                         case 'SpruceTree3': spruceTree3;
+                        case 'BigRock1': BigRock1;
+                        case 'BigRock2': BigRock2;
+                        case 'BigRock3': BigRock3;
+                        case 'BigRock4': BigRock4;
+                        case 'BigRock5': BigRock5;
+                        case 'Rock1': Rock1;
+                        case 'Rock2': Rock2;
+                        case 'Rock3': Rock3;
+                        case 'Rock4': Rock4;
+                        case 'Rock5': Rock5;
+                        case 'Rock6': Rock6;
+                        case 'Rock7': Rock7;
+                        case 'Rock8': Rock8;
+                        case 'Rock9': Rock9;
+                        case 'Rock_10': Rock_10;
+                        case 'Rock_11': Rock_11;
+                        case 'Rock_12': Rock_12;
+                        case 'Rock_13': Rock_13;
+                        case 'Rock_14': Rock_14;
+                        case 'Rock_15': Rock_15;
+                        case 'Rock_16': Rock_16;
+                        case 'Rock_17': Rock_17;
+                        case 'Rock_18': Rock_18;
+                        case 'Rock_19': Rock_19;
+                        case 'Rock_20': Rock_20;
+                        case 'Rock_21': Rock_21;
+                        case 'Rock_22': Rock_22;
+                        case 'Rock_23': Rock_23;
+                        case 'Rock_24': Rock_24;
+                        case 'Rock_25': Rock_25;
                         case 'Ground': ground;
                         default: null;
                     },
@@ -194,6 +436,36 @@ class Resources {
                         case 'SpruceTree1': 1.0;
                         case 'SpruceTree2': 1.0;
                         case 'SpruceTree3': 1.0;
+                        case 'BigRock1': 14.390492/2;
+                        case 'BigRock2': 14.074665/2;
+                        case 'BigRock3': 9.296192/2;
+                        case 'BigRock4': 13.456812/2;
+                        case 'BigRock5': 15.968085/2;
+                        case 'Rock1': 2.731365/2;
+                        case 'Rock2': 2.262327/2;
+                        case 'Rock3': 3.852593/2;
+                        case 'Rock4': 1.794132/2;
+                        case 'Rock5': 2.838603/2;
+                        case 'Rock6': 4.09047/2;
+                        case 'Rock7': 3.981763/2;
+                        case 'Rock8': 3.439961/2;
+                        case 'Rock9': 4.16308/2;
+                        case 'Rock_10': 3.46364/2;
+                        case 'Rock_11': 4.819511/2;
+                        case 'Rock_12': 4.908013/2;
+                        case 'Rock_13': 4.48035/2;
+                        case 'Rock_14': 3.870732/2;
+                        case 'Rock_15': 3.332937/2;
+                        case 'Rock_16': 3.248413/2;
+                        case 'Rock_17': 4.778868/2;
+                        case 'Rock_18': 4.843359/2;
+                        case 'Rock_19': 4.471061/2;
+                        case 'Rock_20': 4.757059/2;
+                        case 'Rock_21': 4.993942/2;
+                        case 'Rock_22': 6.999255/2;
+                        case 'Rock_23': 4.545128/2;
+                        case 'Rock_24': 5.403552/2;
+                        case 'Rock_25': 4.18101/2;
                         default: -1.0;
                     }
                 };

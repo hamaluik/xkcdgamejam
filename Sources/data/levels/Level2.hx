@@ -29,6 +29,9 @@ class Level2 implements Level {
         ]);
 
         Game.renderPhase.add(new systems.RenderSprites());
+        Game.renderPhase.add(new systems.RenderScores());
+
+        Game.unlockPointer();
     }
 
     public function unload():Void {

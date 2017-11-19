@@ -106,13 +106,16 @@ class Level1 implements Level {
         ]);
 
         Game.engine.create([
-            new components.DialogOverlay("It's getting late...", 1, 3, 0.25)
+            new components.DialogOverlay("It's getting late!", 1, 3, 0.25)
         ]);
         Game.engine.create([
-            new components.DialogOverlay("I need to make sure to capture some buns before it gets dark!", 1+3+0.5, 3, 0.25)
+            new components.DialogOverlay("I need to make sure to photograph some buns for my report...", 1+3+0.5, 3, 0.25)
         ]);
         Game.engine.create([
-            new components.DialogOverlay("There's gotta be *some* around here somewhere!", 1+3+0.5+3+0.5, 3, 0.25)
+            new components.DialogOverlay("... before it gets dark!", 1+3+0.5+3+0.5, 3, 0.25)
+        ]);
+        Game.engine.create([
+            new components.DialogOverlay("There's gotta be *some* around here somewhere!", 1+3+0.5+3+0.5+3+0.5, 3, 0.25)
         ]);
 
         Game.updatePhase.add(new systems.LevelSwitcher());

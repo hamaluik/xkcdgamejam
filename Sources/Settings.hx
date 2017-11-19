@@ -17,8 +17,8 @@ class Settings {
     public static var kingBunSize:Float = 0.25;
     public static var minBunSize:Float = 0.5;
     public static var maxBunSize:Float = 2.0;
-    public static var minDaylightTime:Float = 10.0;
-    public static var darkenTime:Float = 10.0;
+    public static var minDaylightTime:Float = 60.0;
+    public static var darkenTime:Float = 60.0;
     public static var minDarken:Float = 0.0;
     public static var numShots:Int = 12; // TODO: == numBuns?
     public static var shotDisplayTime:Float = 2.0;

@@ -5,7 +5,7 @@
     }, 
     "meshes" : [
         {
-            "name" : "DeadOak2", 
+            "name" : "Bun2", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -18,7 +18,7 @@
             ]
         }, 
         {
-            "name" : "DeadOak3", 
+            "name" : "Rock_17", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -31,7 +31,7 @@
             ]
         }, 
         {
-            "name" : "DeadSpruce3", 
+            "name" : "BigRock3", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -44,7 +44,7 @@
             ]
         }, 
         {
-            "name" : "Ground", 
+            "name" : "SpruceTree3", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -57,7 +57,7 @@
             ]
         }, 
         {
-            "name" : "BunKing", 
+            "name" : "Rock6", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -70,7 +70,7 @@
             ]
         }, 
         {
-            "name" : "DeadSpruce2", 
+            "name" : "DeadSpruce1", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -83,7 +83,7 @@
             ]
         }, 
         {
-            "name" : "SpruceTree1", 
+            "name" : "Rock_24", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -96,7 +96,7 @@
             ]
         }, 
         {
-            "name" : "DeadOak1", 
+            "name" : "SpruceTree2", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -109,7 +109,7 @@
             ]
         }, 
         {
-            "name" : "SpruceTree2", 
+            "name" : "DeadSpruce3", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -122,7 +122,7 @@
             ]
         }, 
         {
-            "name" : "OakTree2", 
+            "name" : "BunKing", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -135,7 +135,7 @@
             ]
         }, 
         {
-            "name" : "DeadSpruce1", 
+            "name" : "BigRock4", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -148,7 +148,7 @@
             ]
         }, 
         {
-            "name" : "OakTree3", 
+            "name" : "Rock4", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -161,7 +161,7 @@
             ]
         }, 
         {
-            "name" : "SpruceTree3", 
+            "name" : "DeadOak2", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -174,7 +174,7 @@
             ]
         }, 
         {
-            "name" : "Bun2", 
+            "name" : "Bun1", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -187,7 +187,7 @@
             ]
         }, 
         {
-            "name" : "OakTree1", 
+            "name" : "BigRock5", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -200,7 +200,7 @@
             ]
         }, 
         {
-            "name" : "Bun1", 
+            "name" : "Ground", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -211,11 +211,469 @@
                     "indices" : 60
                 }
             ]
+        }, 
+        {
+            "name" : "DeadOak1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 66, 
+                        "POSITION" : 65, 
+                        "TEXCOORD_0" : 67
+                    }, 
+                    "indices" : 64
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 70, 
+                        "POSITION" : 69, 
+                        "TEXCOORD_0" : 71
+                    }, 
+                    "indices" : 68
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_20", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 74, 
+                        "POSITION" : 73, 
+                        "TEXCOORD_0" : 75
+                    }, 
+                    "indices" : 72
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 78, 
+                        "POSITION" : 77, 
+                        "TEXCOORD_0" : 79
+                    }, 
+                    "indices" : 76
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_21", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 82, 
+                        "POSITION" : 81, 
+                        "TEXCOORD_0" : 83
+                    }, 
+                    "indices" : 80
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_13", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 86, 
+                        "POSITION" : 85, 
+                        "TEXCOORD_0" : 87
+                    }, 
+                    "indices" : 84
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 90, 
+                        "POSITION" : 89, 
+                        "TEXCOORD_0" : 91
+                    }, 
+                    "indices" : 88
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_25", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 94, 
+                        "POSITION" : 93, 
+                        "TEXCOORD_0" : 95
+                    }, 
+                    "indices" : 92
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock9", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 98, 
+                        "POSITION" : 97, 
+                        "TEXCOORD_0" : 99
+                    }, 
+                    "indices" : 96
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 102, 
+                        "POSITION" : 101, 
+                        "TEXCOORD_0" : 103
+                    }, 
+                    "indices" : 100
+                }
+            ]
+        }, 
+        {
+            "name" : "BigRock1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 106, 
+                        "POSITION" : 105, 
+                        "TEXCOORD_0" : 107
+                    }, 
+                    "indices" : 104
+                }
+            ]
+        }, 
+        {
+            "name" : "SpruceTree1", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 110, 
+                        "POSITION" : 109, 
+                        "TEXCOORD_0" : 111
+                    }, 
+                    "indices" : 108
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 114, 
+                        "POSITION" : 113, 
+                        "TEXCOORD_0" : 115
+                    }, 
+                    "indices" : 112
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_10", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 118, 
+                        "POSITION" : 117, 
+                        "TEXCOORD_0" : 119
+                    }, 
+                    "indices" : 116
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadSpruce2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 122, 
+                        "POSITION" : 121, 
+                        "TEXCOORD_0" : 123
+                    }, 
+                    "indices" : 120
+                }
+            ]
+        }, 
+        {
+            "name" : "OakTree2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 126, 
+                        "POSITION" : 125, 
+                        "TEXCOORD_0" : 127
+                    }, 
+                    "indices" : 124
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_18", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 130, 
+                        "POSITION" : 129, 
+                        "TEXCOORD_0" : 131
+                    }, 
+                    "indices" : 128
+                }
+            ]
+        }, 
+        {
+            "name" : "DeadOak3", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 134, 
+                        "POSITION" : 133, 
+                        "TEXCOORD_0" : 135
+                    }, 
+                    "indices" : 132
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock5", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 138, 
+                        "POSITION" : 137, 
+                        "TEXCOORD_0" : 139
+                    }, 
+                    "indices" : 136
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_12", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 142, 
+                        "POSITION" : 141, 
+                        "TEXCOORD_0" : 143
+                    }, 
+                    "indices" : 140
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_15", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 146, 
+                        "POSITION" : 145, 
+                        "TEXCOORD_0" : 147
+                    }, 
+                    "indices" : 144
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_22", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 150, 
+                        "POSITION" : 149, 
+                        "TEXCOORD_0" : 151
+                    }, 
+                    "indices" : 148
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock8", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 154, 
+                        "POSITION" : 153, 
+                        "TEXCOORD_0" : 155
+                    }, 
+                    "indices" : 152
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_19", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 158, 
+                        "POSITION" : 157, 
+                        "TEXCOORD_0" : 159
+                    }, 
+                    "indices" : 156
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_23", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 162, 
+                        "POSITION" : 161, 
+                        "TEXCOORD_0" : 163
+                    }, 
+                    "indices" : 160
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_11", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 166, 
+                        "POSITION" : 165, 
+                        "TEXCOORD_0" : 167
+                    }, 
+                    "indices" : 164
+                }
+            ]
+        }, 
+        {
+            "name" : "BigRock2", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 170, 
+                        "POSITION" : 169, 
+                        "TEXCOORD_0" : 171
+                    }, 
+                    "indices" : 168
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_14", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 174, 
+                        "POSITION" : 173, 
+                        "TEXCOORD_0" : 175
+                    }, 
+                    "indices" : 172
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock7", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 178, 
+                        "POSITION" : 177, 
+                        "TEXCOORD_0" : 179
+                    }, 
+                    "indices" : 176
+                }
+            ]
+        }, 
+        {
+            "name" : "Rock_16", 
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 182, 
+                        "POSITION" : 181, 
+                        "TEXCOORD_0" : 183
+                    }, 
+                    "indices" : 180
+                }
+            ]
         }
     ], 
     "nodes" : [
         {
-            "mesh" : 15, 
+            "mesh" : 26, 
+            "name" : "BigRock1", 
+            "translation" : [
+                -15.98214054107666, 
+                0.0, 
+                -32.25883865356445
+            ]
+        }, 
+        {
+            "mesh" : 42, 
+            "name" : "BigRock2", 
+            "rotation" : [
+                0.0, 
+                -0.5674322247505188, 
+                -0.0, 
+                0.8234202265739441
+            ], 
+            "translation" : [
+                -37.33963394165039, 
+                0.0, 
+                2.0147018432617188
+            ]
+        }, 
+        {
+            "mesh" : 2, 
+            "name" : "BigRock3", 
+            "rotation" : [
+                0.0, 
+                -0.6228196620941162, 
+                -0.0, 
+                0.7823654413223267
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                28.547683715820312, 
+                1.0132789611816406e-06, 
+                -6.764305114746094
+            ]
+        }, 
+        {
+            "mesh" : 10, 
+            "name" : "BigRock4", 
+            "translation" : [
+                -8.838008880615234, 
+                1.6990810632705688, 
+                -50.11101531982422
+            ]
+        }, 
+        {
+            "mesh" : 14, 
+            "name" : "BigRock5", 
+            "rotation" : [
+                0.0, 
+                -0.21043500304222107, 
+                -0.0, 
+                0.9776079654693604
+            ], 
+            "translation" : [
+                -17.046510696411133, 
+                1.2087615728378296, 
+                47.4201545715332
+            ]
+        }, 
+        {
+            "mesh" : 13, 
             "name" : "Bun1", 
             "rotation" : [
                 0.0, 
@@ -235,7 +693,7 @@
             ]
         }, 
         {
-            "mesh" : 13, 
+            "mesh" : 0, 
             "name" : "Bun2", 
             "rotation" : [
                 0.0, 
@@ -255,7 +713,7 @@
             ]
         }, 
         {
-            "mesh" : 4, 
+            "mesh" : 9, 
             "name" : "BunKing", 
             "rotation" : [
                 0.0, 
@@ -424,7 +882,7 @@
             ]
         }, 
         {
-            "mesh" : 7, 
+            "mesh" : 16, 
             "name" : "DeadOak1", 
             "rotation" : [
                 0.0, 
@@ -439,7 +897,22 @@
             ]
         }, 
         {
-            "mesh" : 0, 
+            "mesh" : 16, 
+            "name" : "DeadOak1.001", 
+            "rotation" : [
+                0.0, 
+                0.5694314241409302, 
+                -0.0, 
+                0.8220388293266296
+            ], 
+            "translation" : [
+                35.156211853027344, 
+                0.0, 
+                -13.365550994873047
+            ]
+        }, 
+        {
+            "mesh" : 12, 
             "name" : "DeadOak2", 
             "translation" : [
                 -8.581254959106445, 
@@ -448,7 +921,22 @@
             ]
         }, 
         {
-            "mesh" : 1, 
+            "mesh" : 12, 
+            "name" : "DeadOak2.001", 
+            "rotation" : [
+                0.0, 
+                -0.3380621373653412, 
+                -0.0, 
+                0.9411237835884094
+            ], 
+            "translation" : [
+                17.878450393676758, 
+                4.76837158203125e-07, 
+                15.671602249145508
+            ]
+        }, 
+        {
+            "mesh" : 33, 
             "name" : "DeadOak3", 
             "rotation" : [
                 0.0, 
@@ -463,16 +951,40 @@
             ]
         }, 
         {
-            "mesh" : 10, 
-            "name" : "DeadSpruce1", 
+            "mesh" : 33, 
+            "name" : "DeadOak3.001", 
+            "rotation" : [
+                0.0, 
+                0.8202141523361206, 
+                -0.0, 
+                0.5720565915107727
+            ], 
             "translation" : [
-                -10.585620880126953, 
-                -2.384185791015625e-07, 
-                15.29047966003418
+                27.288860321044922, 
+                0.0, 
+                -25.440446853637695
             ]
         }, 
         {
             "mesh" : 5, 
+            "name" : "DeadSpruce1", 
+            "translation" : [
+                13.277570724487305, 
+                -2.384185791015625e-07, 
+                37.54630661010742
+            ]
+        }, 
+        {
+            "mesh" : 5, 
+            "name" : "DeadSpruce1.001", 
+            "translation" : [
+                3.509735107421875, 
+                -2.384185791015625e-07, 
+                32.476924896240234
+            ]
+        }, 
+        {
+            "mesh" : 30, 
             "name" : "DeadSpruce2", 
             "rotation" : [
                 -7.797544299137371e-08, 
@@ -487,7 +999,37 @@
             ]
         }, 
         {
-            "mesh" : 2, 
+            "mesh" : 30, 
+            "name" : "DeadSpruce2.001", 
+            "rotation" : [
+                -8.134961149153241e-08, 
+                0.05212448909878731, 
+                4.246079043923601e-09, 
+                0.9986405968666077
+            ], 
+            "translation" : [
+                6.751188278198242, 
+                -4.76837158203125e-07, 
+                18.467159271240234
+            ]
+        }, 
+        {
+            "mesh" : 30, 
+            "name" : "DeadSpruce2.002", 
+            "rotation" : [
+                -7.640804255970579e-08, 
+                0.34669384360313416, 
+                2.824180178606639e-08, 
+                0.9379783868789673
+            ], 
+            "translation" : [
+                -4.41435432434082, 
+                -4.76837158203125e-07, 
+                40.631595611572266
+            ]
+        }, 
+        {
+            "mesh" : 8, 
             "name" : "DeadSpruce3", 
             "translation" : [
                 -24.12854766845703, 
@@ -496,20 +1038,25 @@
             ]
         }, 
         {
-            "mesh" : 3, 
+            "mesh" : 15, 
             "name" : "Ground"
         }, 
         {
             "name" : "Hemi"
         }, 
         {
-            "mesh" : 14, 
+            "mesh" : 25, 
             "name" : "OakTree1", 
             "rotation" : [
                 0.0, 
-                -0.9785541296005249, 
+                0.9958109259605408, 
                 -0.0, 
-                0.20599016547203064
+                0.09143716841936111
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
             ], 
             "translation" : [
                 -8.352296829223633, 
@@ -518,7 +1065,42 @@
             ]
         }, 
         {
-            "mesh" : 14, 
+            "mesh" : 25, 
+            "name" : "OakTree1.001", 
+            "rotation" : [
+                0.0, 
+                -0.9996657967567444, 
+                -0.0, 
+                0.02585143782198429
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                -35.059288024902344, 
+                2.384185791015625e-07, 
+                -14.582503318786621
+            ]
+        }, 
+        {
+            "mesh" : 25, 
+            "name" : "OakTree1.002", 
+            "rotation" : [
+                0.0, 
+                -0.9297107458114624, 
+                -0.0, 
+                0.3682906925678253
+            ], 
+            "translation" : [
+                7.701358795166016, 
+                2.384185791015625e-07, 
+                -37.07208251953125
+            ]
+        }, 
+        {
+            "mesh" : 25, 
             "name" : "OakTree1.003", 
             "rotation" : [
                 0.0, 
@@ -533,7 +1115,7 @@
             ]
         }, 
         {
-            "mesh" : 9, 
+            "mesh" : 31, 
             "name" : "OakTree2", 
             "rotation" : [
                 0.0, 
@@ -548,7 +1130,57 @@
             ]
         }, 
         {
-            "mesh" : 11, 
+            "mesh" : 31, 
+            "name" : "OakTree2.001", 
+            "rotation" : [
+                0.0, 
+                0.25643184781074524, 
+                -0.0, 
+                0.9665623307228088
+            ], 
+            "translation" : [
+                15.738103866577148, 
+                0.0, 
+                -21.6295166015625
+            ]
+        }, 
+        {
+            "mesh" : 31, 
+            "name" : "OakTree2.002", 
+            "rotation" : [
+                0.0, 
+                0.42694005370140076, 
+                -0.0, 
+                0.9042799472808838
+            ], 
+            "translation" : [
+                0.7772426605224609, 
+                0.0, 
+                -29.171768188476562
+            ]
+        }, 
+        {
+            "mesh" : 31, 
+            "name" : "OakTree2.003", 
+            "rotation" : [
+                0.0, 
+                -0.9933578968048096, 
+                -0.0, 
+                0.1150660440325737
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                10.792364120483398, 
+                0.0, 
+                -28.058977127075195
+            ]
+        }, 
+        {
+            "mesh" : 28, 
             "name" : "OakTree3", 
             "rotation" : [
                 0.0, 
@@ -563,7 +1195,42 @@
             ]
         }, 
         {
-            "mesh" : 11, 
+            "mesh" : 28, 
+            "name" : "OakTree3.001", 
+            "rotation" : [
+                0.0, 
+                -0.2966584265232086, 
+                -0.0, 
+                0.954983651638031
+            ], 
+            "translation" : [
+                -22.25100326538086, 
+                0.0, 
+                -27.594627380371094
+            ]
+        }, 
+        {
+            "mesh" : 28, 
+            "name" : "OakTree3.002", 
+            "rotation" : [
+                0.0, 
+                0.63227379322052, 
+                -0.0, 
+                0.7747450470924377
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                33.63584899902344, 
+                0.0, 
+                0.5960865020751953
+            ]
+        }, 
+        {
+            "mesh" : 28, 
             "name" : "OakTree3.003", 
             "rotation" : [
                 0.0, 
@@ -578,7 +1245,250 @@
             ]
         }, 
         {
+            "mesh" : 19, 
+            "name" : "Rock1", 
+            "translation" : [
+                -18.391693115234375, 
+                0.0, 
+                -24.582616806030273
+            ]
+        }, 
+        {
+            "mesh" : 22, 
+            "name" : "Rock2", 
+            "translation" : [
+                -10.265253067016602, 
+                0.0, 
+                24.793373107910156
+            ]
+        }, 
+        {
+            "mesh" : 17, 
+            "name" : "Rock3", 
+            "translation" : [
+                14.302602767944336, 
+                0.0, 
+                16.80325698852539
+            ]
+        }, 
+        {
+            "mesh" : 11, 
+            "name" : "Rock4", 
+            "translation" : [
+                22.207015991210938, 
+                0.0, 
+                5.289277076721191
+            ]
+        }, 
+        {
+            "mesh" : 34, 
+            "name" : "Rock5", 
+            "translation" : [
+                18.97075653076172, 
+                0.0, 
+                29.18462562561035
+            ]
+        }, 
+        {
+            "mesh" : 4, 
+            "name" : "Rock6", 
+            "translation" : [
+                -11.584946632385254, 
+                0.0, 
+                32.802825927734375
+            ]
+        }, 
+        {
+            "mesh" : 44, 
+            "name" : "Rock7", 
+            "translation" : [
+                28.356523513793945, 
+                -0.1933426856994629, 
+                -20.05341911315918
+            ]
+        }, 
+        {
+            "mesh" : 38, 
+            "name" : "Rock8", 
+            "translation" : [
+                19.403804779052734, 
+                0.15454387664794922, 
+                21.904090881347656
+            ]
+        }, 
+        {
+            "mesh" : 24, 
+            "name" : "Rock9", 
+            "translation" : [
+                13.402152061462402, 
+                -0.06288480758666992, 
+                -23.935413360595703
+            ]
+        }, 
+        {
+            "mesh" : 29, 
+            "name" : "Rock_10", 
+            "rotation" : [
+                0.0, 
+                -0.5546869039535522, 
+                -0.0, 
+                0.8320591449737549
+            ], 
+            "translation" : [
+                31.103118896484375, 
+                -0.12577104568481445, 
+                13.732328414916992
+            ]
+        }, 
+        {
+            "mesh" : 41, 
+            "name" : "Rock_11", 
+            "translation" : [
+                -7.442968368530273, 
+                -0.1933426856994629, 
+                33.13080978393555
+            ]
+        }, 
+        {
+            "mesh" : 35, 
+            "name" : "Rock_12", 
+            "translation" : [
+                -33.260475158691406, 
+                0.0, 
+                14.177321434020996
+            ]
+        }, 
+        {
+            "mesh" : 21, 
+            "name" : "Rock_13", 
+            "translation" : [
+                -22.310001373291016, 
+                0.0, 
+                16.143211364746094
+            ]
+        }, 
+        {
+            "mesh" : 43, 
+            "name" : "Rock_14", 
+            "translation" : [
+                41.13695526123047, 
+                -0.1933426856994629, 
+                -3.2435216903686523
+            ]
+        }, 
+        {
+            "mesh" : 36, 
+            "name" : "Rock_15", 
+            "translation" : [
+                15.70550537109375, 
+                0.02408701181411743, 
+                2.5772318840026855
+            ]
+        }, 
+        {
+            "mesh" : 45, 
+            "name" : "Rock_16", 
+            "translation" : [
+                -16.218528747558594, 
+                0.1980299949645996, 
+                -9.175413131713867
+            ]
+        }, 
+        {
+            "mesh" : 1, 
+            "name" : "Rock_17", 
+            "translation" : [
+                -7.231112003326416, 
+                0.0, 
+                -7.802064418792725
+            ]
+        }, 
+        {
+            "mesh" : 32, 
+            "name" : "Rock_18", 
+            "translation" : [
+                0.989147961139679, 
+                0.0, 
+                -34.76679992675781
+            ]
+        }, 
+        {
+            "mesh" : 39, 
+            "name" : "Rock_19", 
+            "translation" : [
+                6.906487941741943, 
+                0.15454339981079102, 
+                -7.879755020141602
+            ]
+        }, 
+        {
+            "mesh" : 18, 
+            "name" : "Rock_20", 
+            "translation" : [
+                15.215521812438965, 
+                0.24151611328125, 
+                -7.791202068328857
+            ]
+        }, 
+        {
+            "mesh" : 20, 
+            "name" : "Rock_21", 
+            "translation" : [
+                -15.6649751663208, 
+                0.6416605114936829, 
+                -16.453128814697266
+            ]
+        }, 
+        {
+            "mesh" : 37, 
+            "name" : "Rock_22", 
+            "translation" : [
+                -35.14336395263672, 
+                0.41545912623405457, 
+                -17.02737808227539
+            ]
+        }, 
+        {
+            "mesh" : 40, 
+            "name" : "Rock_23", 
+            "translation" : [
+                29.8781681060791, 
+                0.0, 
+                19.130699157714844
+            ]
+        }, 
+        {
             "mesh" : 6, 
+            "name" : "Rock_24", 
+            "rotation" : [
+                0.0, 
+                0.44601964950561523, 
+                -0.0, 
+                0.8950232863426208
+            ], 
+            "translation" : [
+                -21.497724533081055, 
+                0.0, 
+                19.870222091674805
+            ]
+        }, 
+        {
+            "mesh" : 23, 
+            "name" : "Rock_25", 
+            "rotation" : [
+                0.0, 
+                0.3242179751396179, 
+                -0.0, 
+                0.9459823966026306
+            ], 
+            "translation" : [
+                28.05986785888672, 
+                0.41545912623405457, 
+                -0.5883960723876953
+            ]
+        }, 
+        {
+            "mesh" : 27, 
             "name" : "SpruceTree1", 
             "rotation" : [
                 -8.146033536604591e-08, 
@@ -593,7 +1503,37 @@
             ]
         }, 
         {
-            "mesh" : 6, 
+            "mesh" : 27, 
+            "name" : "SpruceTree1.001", 
+            "rotation" : [
+                -4.992338276110786e-08, 
+                -0.7901954054832458, 
+                -6.436957988853464e-08, 
+                0.6128551363945007
+            ], 
+            "translation" : [
+                -15.22543716430664, 
+                0.0, 
+                28.934967041015625
+            ]
+        }, 
+        {
+            "mesh" : 27, 
+            "name" : "SpruceTree1.002", 
+            "rotation" : [
+                -7.368513621486272e-08, 
+                0.4263628423213959, 
+                3.4731659326325826e-08, 
+                0.9045523405075073
+            ], 
+            "translation" : [
+                7.296367168426514, 
+                0.0, 
+                43.349971771240234
+            ]
+        }, 
+        {
+            "mesh" : 27, 
             "name" : "SpruceTree1.003", 
             "rotation" : [
                 -8.146033536604591e-08, 
@@ -608,7 +1548,7 @@
             ]
         }, 
         {
-            "mesh" : 6, 
+            "mesh" : 27, 
             "name" : "SpruceTree1.004", 
             "rotation" : [
                 -4.992338276110786e-08, 
@@ -623,7 +1563,7 @@
             ]
         }, 
         {
-            "mesh" : 6, 
+            "mesh" : 27, 
             "name" : "SpruceTree1.005", 
             "rotation" : [
                 -6.771647065306752e-08, 
@@ -638,7 +1578,22 @@
             ]
         }, 
         {
-            "mesh" : 8, 
+            "mesh" : 27, 
+            "name" : "SpruceTree1.006", 
+            "rotation" : [
+                -7.565928683561651e-08, 
+                -0.3706141710281372, 
+                -3.01903497756939e-08, 
+                0.9287869334220886
+            ], 
+            "translation" : [
+                -20.5582332611084, 
+                0.0, 
+                35.4343147277832
+            ]
+        }, 
+        {
+            "mesh" : 7, 
             "name" : "SpruceTree2", 
             "rotation" : [
                 0.0, 
@@ -653,7 +1608,37 @@
             ]
         }, 
         {
-            "mesh" : 8, 
+            "mesh" : 7, 
+            "name" : "SpruceTree2.001", 
+            "rotation" : [
+                0.0, 
+                0.513195276260376, 
+                -0.0, 
+                0.8582718968391418
+            ], 
+            "translation" : [
+                18.221349716186523, 
+                4.76837158203125e-07, 
+                18.542827606201172
+            ]
+        }, 
+        {
+            "mesh" : 7, 
+            "name" : "SpruceTree2.002", 
+            "rotation" : [
+                0.0, 
+                0.8361991047859192, 
+                -0.0, 
+                0.54842609167099
+            ], 
+            "translation" : [
+                20.19964599609375, 
+                4.76837158203125e-07, 
+                7.662200927734375
+            ]
+        }, 
+        {
+            "mesh" : 7, 
             "name" : "SpruceTree2.003", 
             "rotation" : [
                 0.0, 
@@ -668,7 +1653,7 @@
             ]
         }, 
         {
-            "mesh" : 8, 
+            "mesh" : 7, 
             "name" : "SpruceTree2.004", 
             "rotation" : [
                 0.0, 
@@ -683,7 +1668,7 @@
             ]
         }, 
         {
-            "mesh" : 8, 
+            "mesh" : 7, 
             "name" : "SpruceTree2.005", 
             "rotation" : [
                 0.0, 
@@ -698,7 +1683,7 @@
             ]
         }, 
         {
-            "mesh" : 8, 
+            "mesh" : 7, 
             "name" : "SpruceTree2.006", 
             "rotation" : [
                 0.0, 
@@ -713,8 +1698,49 @@
             ]
         }, 
         {
-            "mesh" : 12, 
+            "mesh" : 7, 
+            "name" : "SpruceTree2.007", 
+            "rotation" : [
+                0.0, 
+                0.513195276260376, 
+                -0.0, 
+                0.8582718968391418
+            ], 
+            "translation" : [
+                -25.318618774414062, 
+                0.0, 
+                23.45197296142578
+            ]
+        }, 
+        {
+            "mesh" : 7, 
+            "name" : "SpruceTree2.008", 
+            "rotation" : [
+                0.0, 
+                0.8533042669296265, 
+                -0.0, 
+                0.5214133858680725
+            ], 
+            "translation" : [
+                -23.98542022705078, 
+                0.0, 
+                30.45126724243164
+            ]
+        }, 
+        {
+            "mesh" : 3, 
             "name" : "SpruceTree3", 
+            "rotation" : [
+                0.0, 
+                0.20777080953121185, 
+                -0.0, 
+                0.978177547454834
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
             "translation" : [
                 -18.635366439819336, 
                 9.5367431640625e-07, 
@@ -722,7 +1748,47 @@
             ]
         }, 
         {
-            "mesh" : 12, 
+            "mesh" : 3, 
+            "name" : "SpruceTree3.001", 
+            "rotation" : [
+                0.0, 
+                0.069362111389637, 
+                -0.0, 
+                0.9975915551185608
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                13.842798233032227, 
+                0.0, 
+                22.124618530273438
+            ]
+        }, 
+        {
+            "mesh" : 3, 
+            "name" : "SpruceTree3.002", 
+            "rotation" : [
+                0.0, 
+                0.7923741340637207, 
+                -0.0, 
+                0.6100355982780457
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                22.15507698059082, 
+                0.0, 
+                25.76768684387207
+            ]
+        }, 
+        {
+            "mesh" : 3, 
             "name" : "SpruceTree3.003", 
             "rotation" : [
                 0.0, 
@@ -737,7 +1803,7 @@
             ]
         }, 
         {
-            "mesh" : 12, 
+            "mesh" : 3, 
             "name" : "SpruceTree3.004", 
             "rotation" : [
                 0.0, 
@@ -757,7 +1823,7 @@
             ]
         }, 
         {
-            "mesh" : 12, 
+            "mesh" : 3, 
             "name" : "SpruceTree3.005", 
             "rotation" : [
                 0.0, 
@@ -770,6 +1836,41 @@
                 0.0, 
                 27.437849044799805
             ]
+        }, 
+        {
+            "mesh" : 3, 
+            "name" : "SpruceTree3.006", 
+            "rotation" : [
+                0.0, 
+                0.7923741340637207, 
+                -0.0, 
+                0.6100355982780457
+            ], 
+            "scale" : [
+                0.9999999403953552, 
+                1.0, 
+                0.9999999403953552
+            ], 
+            "translation" : [
+                27.71903419494629, 
+                0.0, 
+                14.76341724395752
+            ]
+        }, 
+        {
+            "mesh" : 3, 
+            "name" : "SpruceTree3.007", 
+            "rotation" : [
+                0.0, 
+                -0.33076274394989014, 
+                -0.0, 
+                0.9437139630317688
+            ], 
+            "translation" : [
+                -28.867958068847656, 
+                0.0, 
+                21.914960861206055
+            ]
         }
     ], 
     "scene" : 0, 
@@ -777,46 +1878,100 @@
         {
             "name" : "Scene", 
             "nodes" : [
+                35, 
+                29, 
+                93, 
+                76, 
+                85, 
+                84, 
+                20, 
+                24, 
+                92, 
+                43, 
+                72, 
+                28, 
+                34, 
+                40, 
+                39, 
+                88, 
+                22, 
+                79, 
+                78, 
+                42, 
+                38, 
+                26, 
+                71, 
+                87, 
+                69, 
+                68, 
+                67, 
+                66, 
+                65, 
+                64, 
+                63, 
+                62, 
+                61, 
+                60, 
+                59, 
+                58, 
+                57, 
+                56, 
+                55, 
+                54, 
+                53, 
+                52, 
+                51, 
+                50, 
+                49, 
+                48, 
+                47, 
+                46, 
+                45, 
+                4, 
+                3, 
+                2, 
+                1, 
+                0, 
+                18, 
+                17, 
+                16, 
+                15, 
+                14, 
                 13, 
                 12, 
                 11, 
                 10, 
                 9, 
                 8, 
+                83, 
+                91, 
+                90, 
+                89, 
+                82, 
+                81, 
+                80, 
+                36, 
+                44, 
+                75, 
+                74, 
+                73, 
                 7, 
                 6, 
                 5, 
-                4, 
-                3, 
-                35, 
-                39, 
-                38, 
-                37, 
-                34, 
-                33, 
+                31, 
                 32, 
-                23, 
-                26, 
                 30, 
-                29, 
-                28, 
-                2, 
-                1, 
-                0, 
-                20, 
+                25, 
+                27, 
+                23, 
                 21, 
                 19, 
-                17, 
-                18, 
-                16, 
-                15, 
-                14, 
-                25, 
-                24, 
-                22, 
-                36, 
-                31, 
-                27
+                41, 
+                37, 
+                33, 
+                86, 
+                77, 
+                70
             ]
         }
     ]

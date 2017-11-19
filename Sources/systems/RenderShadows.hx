@@ -57,7 +57,7 @@ class RenderShadows implements ISystem {
     }
 
     function update(ss:SunShadow, t:Transform) {
-        //if(ss.rendered) return;
+        if(ss.dirty) return;
 
         var g = ss.image.g4;
         //var g = Game.state.g4;
@@ -77,7 +77,5 @@ class RenderShadows implements ISystem {
             g.setIndexBuffer(rmr.mesh.indexBuffer);
             g.drawIndexedVertices();
         }
-        
-        ss.rendered = true;
     }
 }

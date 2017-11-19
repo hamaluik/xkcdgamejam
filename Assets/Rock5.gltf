@@ -2,10 +2,10 @@
     "accessors" : [
         {
             "bufferView" : 0, 
-            "componentType" : 5123, 
-            "count" : 20898, 
+            "componentType" : 5121, 
+            "count" : 336, 
             "max" : [
-                7438
+                239
             ], 
             "min" : [
                 0
@@ -15,46 +15,46 @@
         {
             "bufferView" : 1, 
             "componentType" : 5126, 
-            "count" : 7439, 
+            "count" : 240, 
             "max" : [
-                51.68655776977539, 
-                15.831096649169922, 
-                50.47919464111328
+                1.2557222843170166, 
+                0.632561206817627, 
+                1.2267121076583862
             ], 
             "min" : [
-                -50.118438720703125, 
-                -0.07684993743896484, 
-                -50.49567413330078
+                -1.5828808546066284, 
+                -0.536011815071106, 
+                -0.9201409220695496
             ], 
             "type" : "VEC3"
         }, 
         {
             "bufferView" : 2, 
             "componentType" : 5126, 
-            "count" : 7439, 
+            "count" : 240, 
             "max" : [
-                0.99920654296875, 
-                1.0, 
-                0.999847412109375
+                0.9188817739486694, 
+                0.9990233778953552, 
+                0.9558396935462952
             ], 
             "min" : [
-                -0.99932861328125, 
-                -0.999969482421875, 
-                -0.999969482421875
+                -0.9864802956581116, 
+                -0.9971923232078552, 
+                -0.9636219143867493
             ], 
             "type" : "VEC3"
         }, 
         {
             "bufferView" : 3, 
             "componentType" : 5126, 
-            "count" : 7439, 
+            "count" : 240, 
             "max" : [
-                0.354352742433548, 
-                0.11104637384414673
+                0.41267168521881104, 
+                0.03393888473510742
             ], 
             "min" : [
-                0.01537572592496872, 
-                0.013662993907928467
+                0.39386308193206787, 
+                0.015130281448364258
             ], 
             "type" : "VEC2"
         }
@@ -66,38 +66,38 @@
     "bufferViews" : [
         {
             "buffer" : 0, 
-            "byteLength" : 41796, 
+            "byteLength" : 336, 
             "byteOffset" : 0, 
             "target" : 34963
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 89268, 
-            "byteOffset" : 41796, 
+            "byteLength" : 2880, 
+            "byteOffset" : 336, 
             "target" : 34962
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 89268, 
-            "byteOffset" : 131064, 
+            "byteLength" : 2880, 
+            "byteOffset" : 3216, 
             "target" : 34962
         }, 
         {
             "buffer" : 0, 
-            "byteLength" : 59512, 
-            "byteOffset" : 220332, 
+            "byteLength" : 1920, 
+            "byteOffset" : 6096, 
             "target" : 34962
         }
     ], 
     "buffers" : [
         {
-            "byteLength" : 279844, 
-            "uri" : "Ground.bin"
+            "byteLength" : 8016, 
+            "uri" : "Rock5.bin"
         }
     ], 
     "meshes" : [
         {
-            "name" : "Ground", 
+            "name" : "Rock5", 
             "primitives" : [
                 {
                     "attributes" : {
@@ -113,7 +113,12 @@
     "nodes" : [
         {
             "mesh" : 0, 
-            "name" : "Ground"
+            "name" : "Rock5", 
+            "translation" : [
+                18.97075653076172, 
+                0.0, 
+                29.18462562561035
+            ]
         }
     ], 
     "scene" : 0, 
