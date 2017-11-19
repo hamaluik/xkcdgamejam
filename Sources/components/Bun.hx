@@ -9,11 +9,13 @@ class Bun implements IComponent {
     public static var buns:IntMap<Bun> = new IntMap<Bun>();
 
     var id:Int;
+    var name:String;
     var size:Float;
     var type:TBun;
 
     public function new(size:Float, type:TBun) {
         this.id = _nextID;
+        this.name = utils.NameGenerator.generate(size);
         this.size = size;
         this.type = type;
 
