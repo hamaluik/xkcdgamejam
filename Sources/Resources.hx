@@ -141,10 +141,10 @@ class Resources {
             var n = {
                 pos: node.translation == null ? new Vec3() : new Vec3(node.translation[0], node.translation[1], node.translation[2]),
                 bunFactor: switch(node.mesh.name) {
-                    case 'Bun1': new Vec4(1, 0, 0, 0);
-                    case 'Bun2': new Vec4(0, 1, 0, 0);
-                    case 'BunKing': new Vec4(1, 0, 1, 0);
-                    default: new Vec4();
+                    case 'Bun1': new Vec4(1, 0, 0, 1);
+                    case 'Bun2': new Vec4(0, 1, 0, 1);
+                    case 'BunKing': new Vec4(0, 0, 1, 1);
+                    default: new Vec4(0, 0, 0, 1);
                 },
                 mesh: switch(node.mesh.name) {
                     case 'Bun1': bun1;

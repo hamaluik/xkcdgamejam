@@ -1,14 +1,81 @@
 package systems;
 
+import kha.Color;
+import kha.Shaders;
+import kha.Image;
+import kha.System;
+import kha.graphics4.TextureFormat;
+import kha.graphics4.DepthStencilFormat;
+import kha.graphics4.PipelineState;
+import kha.graphics4.VertexStructure;
+import kha.graphics4.VertexData;
+import kha.graphics4.ConstantLocation;
+import kha.graphics4.CullMode;
+import kha.graphics4.CompareMode;
 import edge.ISystem;
+import edge.View;
 import edge.Entity;
+import components.MeshRender;
+import components.Transform;
 import components.Camera;
 import components.SnapCamera;
 import components.Film;
 import utils.FloatTools;
+import types.SnapShot;
+import haxe.io.Bytes;
+using glm.Mat4;
 
 class PictureTakingSystem implements ISystem {
     var entity:Entity;
+    var renderables:View<{t:Transform, mr:MeshRender}>;
+
+	var bunDetectorPipeline:PipelineState;
+	var mvpID:ConstantLocation;
+	var bunFactorID:ConstantLocation;
+
+    var bg:Color = Color.Black;
+    var mvp:Mat4;
+
+    var detectorImage:Image;
+
+    public function new() {
+        // initialize everything!
+        mvp = new Mat4();
+
+        var structure = new VertexStructure();
+        structure.add("position", VertexData.Float3);
+        structure.add("normal",   VertexData.Float3);
+        structure.add("texcoord", VertexData.Float2);
+
+		bunDetectorPipeline = new PipelineState();
+		bunDetectorPipeline.inputLayout = [structure];
+		bunDetectorPipeline.vertexShader = Shaders.bundetector_vert;
+		bunDetectorPipeline.fragmentShader = Shaders.bundetector_frag;
+        bunDetectorPipeline.cullMode = CullMode.Clockwise;
+        bunDetectorPipeline.depthMode = CompareMode.Less;
+        bunDetectorPipeline.depthWrite = true;
+
+        detectorImage = Image.createRenderTarget(
+            System.windowWidth(), System.windowHeight(),
+            TextureFormat.RGBA32,
+            DepthStencilFormat.DepthAutoStencilAuto
+        );
+
+        try {
+            bunDetectorPipeline.compile();
+        }
+        catch(e:String) {
+            #if js
+            js.Browser.console.error(e);
+            #else
+            trace('ERROR:');
+            trace(e);
+            #end
+        }
+
+		mvpID = bunDetectorPipeline.getConstantLocation("MVP");
+		bunFactorID = bunDetectorPipeline.getConstantLocation("bunFactor");
+    }
 
     function update(c:Camera, sc:SnapCamera, f:Film) {
         if(!sc.snapping && Game.state.mousePressed && Math.abs(sc.transition - 1.0) <= 0.0001) {
@@ -21,7 +88,8 @@ class PictureTakingSystem implements ISystem {
                 sc.snapping = true;
                 
                 f.shots[shotsTaken].taken = true;
-                // TODO: take picture with bun detector
+                // take picture with bun detector
+                detectBuns(c, f.shots[shotsTaken]);
                 // take a picture of the actual scene
                 entity.add(new components.Shot(f.shots[shotsTaken]));
 
@@ -45,5 +113,37 @@ class PictureTakingSystem implements ISystem {
             sc.flash = 0;
             sc.flashFrame = 0;
         }
+    }
+
+    function detectBuns(cam:Camera, snapShot:SnapShot) {
+        // render the buns!
+        var g = detectorImage.g4;
+        g.begin();
+        g.clear(bg, 1);
+        g.setPipeline(bunDetectorPipeline);
+
+        for(target in renderables) {
+            var t:Transform = target.data.t;
+            var mr:MeshRender = target.data.mr;
+
+            mvp = Mat4.multMat(cam.vp, t.m, mvp);
+            g.setMatrix(mvpID, mvp);
+            g.setVector4(bunFactorID, mr.bunFactor);
+
+            g.setVertexBuffer(mr.mesh.vertexBuffer);
+            g.setIndexBuffer(mr.mesh.indexBuffer);
+            g.drawIndexedVertices();
+        }
+
+        // analyze the result
+        var numRed:Int = 0; var numGreen:Int = 0; var numBlue:Int = 0;
+        var pixelData:Bytes = detectorImage.getPixels();
+        for(i in 0...(detectorImage.width * detectorImage.height)) {
+            var colour:Color = pixelData.getInt32(i * 4);
+            if(colour.Rb == 255) numRed++;
+            if(colour.Gb == 255) numGreen++;
+            if(colour.Bb == 255) numBlue++;
+        }
+        js.Browser.console.log('Bun Report:', numRed, numGreen, numBlue);
     }
 }

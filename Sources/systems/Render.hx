@@ -23,7 +23,6 @@ using glm.Mat4;
 using glm.Vec4;
 using glm.Vec3;
 
-@:allow(Game)
 class Render implements ISystem {
     var renderables:View<{t:Transform, mr:MeshRender}>;
     var directionalLights:View<{l:LightDirection}>;
@@ -48,7 +47,7 @@ class Render implements ISystem {
     var ambientColour:Vec3;
     var shadowBias:Float = 0.0005;
 
-    function new() {
+    public function new() {
         // initialize everything!
         mvp = new Mat4();
         lightDirection = new Vec3(0, 1, 0);

@@ -6,9 +6,8 @@ import components.Camera;
 import components.SnapCamera;
 import components.Film;
 
-@:allow(Game)
 class RenderHUDSystem implements ISystem {
-    function new() {
+    public function new() {
     }
 
     function update(cam:Camera, s:SnapCamera, f:Film) {
@@ -26,16 +25,17 @@ class RenderHUDSystem implements ISystem {
 
         g.font = Game.resources.font;
         g.fontSize = 32;
-        g.drawString('${12 - shotsTaken}/${shotsTotal}', 525, 428);
+        var shotsLeft:Int = 12 - shotsTaken;
+        g.drawString((shotsLeft < 10 ? '0' : '') + '${shotsLeft}/${shotsTotal}', 525, 428);
 
-        if(shotsTaken > 0) {
+        /*if(shotsTaken > 0) {
             g.color = Color.White;
             g.drawScaledImage(
                 f.shots[shotsTaken - 1].photo,
                 240, 0,
                 160, 120
             );
-        }
+        }*/
 
         g.end();
     }

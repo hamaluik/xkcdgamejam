@@ -18,6 +18,8 @@ class SunShadow implements IComponent {
 
     var image:Image;
 
+    var rendered:Bool = false;
+
     public function new(znear:Float = 0.1, zfar:Float = 100) {
 		this.znear = znear;
 		this.zfar = zfar;

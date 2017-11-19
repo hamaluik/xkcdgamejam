@@ -13,8 +13,8 @@ class Game {
 	public static var state(default, null):State;
     public static var engine(default, null):Engine;
     
-    static var updatePhase:Phase;
-    static var renderPhase:Phase;
+    public static var updatePhase(default, null):Phase;
+    public static var renderPhase(default, null):Phase;
 
     public static var random(default, null):Random;
     public static var resources(default, null):Resources;
@@ -90,25 +90,7 @@ class Game {
 
 		engine = new Engine();
         updatePhase = engine.createPhase();
-        updatePhase.add(new systems.FPSMovementSystem());
-        updatePhase.add(new systems.CrouchSystem());
-        updatePhase.add(new systems.JumpSystem());
-        updatePhase.add(new systems.HeadBobSystem());
-        updatePhase.add(new systems.VerticalOffsetSystem());
-        updatePhase.add(new systems.MouseLookSystem());
-        updatePhase.add(new systems.VelocitySystem());
-        updatePhase.add(new systems.BumperSystem());
-        updatePhase.add(new systems.CameraZoomSystem());
-        updatePhase.add(new systems.MatricesTransform());
-        updatePhase.add(new systems.MatricesShadows());
-        updatePhase.add(new systems.MatricesCamera());
-        updatePhase.add(new systems.PictureTakingSystem());
-
         renderPhase = engine.createPhase();
-        renderPhase.add(new systems.RenderShadows());
-        renderPhase.add(new systems.Render());
-        renderPhase.add(new systems.RenderPostProcessing());
-        renderPhase.add(new systems.RenderHUDSystem());
 
         levels[currentLevel].load();
 

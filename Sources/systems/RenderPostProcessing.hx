@@ -24,7 +24,6 @@ using glm.Mat4;
 using glm.Vec4;
 using glm.Vec3;
 
-@:allow(Game)
 class RenderPostProcessing implements ISystem {
     var shots:View<{shot:Shot}>;
 
@@ -36,7 +35,7 @@ class RenderPostProcessing implements ISystem {
     var texID:TextureUnit;
     var bg:Color = Color.Magenta;
 
-    function new() {
+    public function new() {
         var structure = new VertexStructure();
         structure.add("position", VertexData.Float2);
 
@@ -106,7 +105,7 @@ class RenderPostProcessing implements ISystem {
         g.drawIndexedVertices();
 
         // also render any shots!
-        for(shot in shots) {
+        /*for(shot in shots) {
             g = shot.data.shot.target.photo.g4;
             g.begin();
             g.clear(bg, 1);
@@ -122,6 +121,6 @@ class RenderPostProcessing implements ISystem {
 
             // delete the shot now that we've taken it
             shot.entity.remove(shot.data.shot);
-        }
+        }*/
     }
 }

@@ -15,7 +15,6 @@ import components.MeshRender;
 import components.Transform;
 using glm.Mat4;
 
-@:allow(Game)
 class RenderShadows implements ISystem {
     var renderables:View<{t:Transform, mr:MeshRender}>;
 
@@ -25,7 +24,7 @@ class RenderShadows implements ISystem {
     var bg:Color = Color.Black;
     var mvp:Mat4;
 
-    function new() {
+    public function new() {
         // initialize everything!
         mvp = new Mat4();
 
@@ -58,6 +57,8 @@ class RenderShadows implements ISystem {
     }
 
     function update(ss:SunShadow, t:Transform) {
+        if(ss.rendered) return;
+
         var g = ss.image.g4;
         //var g = Game.state.g4;
         g.begin();
@@ -76,5 +77,7 @@ class RenderShadows implements ISystem {
             g.setIndexBuffer(rmr.mesh.indexBuffer);
             g.drawIndexedVertices();
         }
+        
+        ss.rendered = true;
     }
 }
