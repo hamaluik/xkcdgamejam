@@ -15,6 +15,6 @@ class LightDarkenSystem implements ISystem {
         }
 
         l.t += Game.state.dt_fixed;
-        if(l.t >= Settings.darkenTime) l.t = Settings.darkenTime;
+        if(l.t >= Settings.minDaylightTime + Settings.darkenTime) l.t = Settings.minDaylightTime + Settings.darkenTime;
     }
 }

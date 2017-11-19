@@ -20,6 +20,7 @@ import components.Transform;
 import components.Camera;
 import components.SnapCamera;
 import components.Film;
+import components.LightDarken;
 import utils.FloatTools;
 import types.SnapShot;
 import haxe.io.Bytes;
@@ -29,6 +30,7 @@ using glm.Mat4;
 class PictureTakingSystem implements ISystem {
     var entity:Entity;
     var renderables:View<{t:Transform, mr:MeshRender}>;
+    var lightDarkens:View<{ld:LightDarken}>;
 
 	var bunDetectorPipeline:PipelineState;
 	var mvpID:ConstantLocation;
@@ -87,12 +89,25 @@ class PictureTakingSystem implements ISystem {
             }
             if(shotsTaken < shotsTotal) {
                 sc.snapping = true;
+
+                // store the lightScale value for this shot
+                var lightScale:Float = 1;
+                for(d in lightDarkens) {
+                    if(d.data.ld.lightScale < lightScale) {
+                        lightScale = d.data.ld.lightScale;
+                    }
+                }
+                f.shots[shotsTaken].lightScale = lightScale;
                 
                 f.shots[shotsTaken].taken = true;
                 // take picture with bun detector
                 detectBuns(c, f.shots[shotsTaken]);
                 // take a picture of the actual scene
                 entity.add(new components.Shot(f.shots[shotsTaken]));
+                // render it on the HUD for a bit
+                Game.engine.create([
+                    new components.ShotDisplay(f.shots[shotsTaken])
+                ]);
 
                 // don't start flashing yet!
                 return;
@@ -152,11 +167,12 @@ class PictureTakingSystem implements ISystem {
         // TODO: store bun alignment
 
         // store the results!
-        snapShot.results = results;
+        snapShot.detectionResults = results;
 
         js.Browser.console.log('Bun report:');
         for(key in results.keys()) {
             js.Browser.console.log('  ${components.Bun.buns.get(key).name} => ${results.get(key)}');
         }
+        js.Browser.console.log('Score: ', snapShot.analysis.score);
     }
 }

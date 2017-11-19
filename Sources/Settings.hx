@@ -19,5 +19,8 @@ class Settings {
     public static var maxBunSize:Float = 2.0;
     public static var minDaylightTime:Float = 60.0;
     public static var darkenTime:Float = 60.0;
-    public static var minDarken:Float = 0.1;
+    public static var minDarken:Float = 0.0;
+    public static var numShots:Int = 30; // TODO: == numBuns?
+    public static var shotDisplayTime:Float = 2.0;
+    public static var shotDisplayFadeTime:Float = 1.0;
 }

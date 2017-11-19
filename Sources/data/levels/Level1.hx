@@ -116,6 +116,7 @@ class Level1 implements Level {
         Game.updatePhase.add(new systems.MatricesCamera());
         Game.updatePhase.add(new systems.PictureTakingSystem());
         Game.updatePhase.add(new systems.LightDarkenSystem());
+        Game.updatePhase.add(new systems.ShotDisplaySystem());
         
         Game.renderPhase.add(new systems.RenderShadows());
         Game.renderPhase.add(new systems.Render());
