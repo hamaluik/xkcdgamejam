@@ -138,8 +138,6 @@ class Level1 implements Level {
         Game.renderPhase.add(new systems.Render());
         Game.renderPhase.add(new systems.RenderPostProcessing());
         Game.renderPhase.add(new systems.RenderHUDSystem());
-
-        Main.hideLoading();
     }
 
     public function unload():Void {

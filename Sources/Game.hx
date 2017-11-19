@@ -22,7 +22,7 @@ class Game {
     public static var mute(default, null):Bool = true; // TODO: make false for release!
 
     // TODO: starting at level 0 breaks shadows somehow!
-    public static var currentLevel:Int = 1;
+    public static var currentLevel:Int = 0;
     public static var levels(default, null):Array<Level> = [
         new data.levels.Level0(),
         new data.levels.Level1(),

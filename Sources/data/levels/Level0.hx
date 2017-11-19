@@ -22,6 +22,8 @@ class Level0 implements Level {
         Game.updatePhase.add(new systems.LevelSwitcher());
 
         Game.renderPhase.add(new systems.RenderSprites());
+
+        Main.hideLoading();
     }
 
     public function unload():Void {

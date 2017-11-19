@@ -33,5 +33,6 @@ class SunShadow implements IComponent {
             TextureFormat.RGBA32,
             DepthStencilFormat.DepthAutoStencilAuto
         );
+        //this.image = null;
     }
 }
