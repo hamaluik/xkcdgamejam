@@ -11,6 +11,7 @@ using StringTools;
 
 @:allow(Game)
 class Resources {
+    public var bmgLogo(default, null):Image;
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
     public var muteIcon(default, null):Image;
@@ -38,6 +39,7 @@ class Resources {
     public var bunSpawns(default, null):Array<{ pos:Vec3, rot:Quat }>;
 
     function new() {
+        bmgLogo = Assets.images.blazingmammothgames;
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
         muteIcon = Assets.images.mute;

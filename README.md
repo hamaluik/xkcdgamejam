@@ -32,3 +32,4 @@ https://itch.io/jam/xkcdgamejam
 * "[Rocky Mountain Outdoors: wind and birds](https://freesound.org/people/petebuchwald/sounds/288899/)" by [Pete Buchwald](http://www.petebuchwald.com/) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 * "[Low Poly Forest Pack](https://jaks.itch.io/lowpolyforestpack)" by [Jaks](https://jaks.itch.io/)
 * "[Mute](https://thenounproject.com/search/?q=mute&i=1365422)" by [Rajive Sharma](https://thenounproject.com/rajive.sharma/) is licensed under [CC BY 3.0 US](https://creativecommons.org/licenses/by/3.0/us/)
+* "[Targa Mono](http://www.zetafonts.com/targa-monospace)" by [Cosimo Lorenzo Pancini](http://www.cosimolorenzopancini.com/) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)

@@ -21,10 +21,19 @@ class Game {
 
     public static var mute(default, null):Bool = true; // TODO: make false for release!
 
-    public static var currentLevel:Int = 0;
+    // TODO: starting at level 0 breaks shadows somehow!
+    public static var currentLevel:Int = 1;
     public static var levels(default, null):Array<Level> = [
+        new data.levels.Level0(),
         new data.levels.Level1()
     ];
+
+    public static function changeLevel(nextLevel:Int):Void {
+        js.Browser.console.log('Changing level to: ', nextLevel);
+        levels[currentLevel].unload();
+        currentLevel = nextLevel;
+        levels[currentLevel].load();
+    }
 
     static function initialize():Void {
         // TODO: new seed each time
