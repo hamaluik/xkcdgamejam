@@ -13,6 +13,7 @@ class VelocitySystem implements ISystem {
         t.pos.y += vel.v.y * Game.state.dt_fixed;
         t.pos.z += vel.v.z * Game.state.dt_fixed;
 
+        // TODO: move boundary check to its own system!
         v.x = t.pos.x;
         v.y = t.pos.z;
         if(v.length() > 49) {

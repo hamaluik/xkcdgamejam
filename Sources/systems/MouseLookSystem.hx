@@ -14,9 +14,14 @@ class MouseLookSystem implements ISystem {
     var elevationAxis:Vec3 = new Vec3(1, 0, 0);
     var qElevation:Quat = new Quat().identity();
 
+    @:access(State)
     public function before():Void {
         if(!Game.state.pointerLocked) {
             Game.lockPointer();
+            Game.state.dt_fixed = 0;
+        }
+        else {
+            Game.state.dt_fixed = 1/60;
         }
     }
 

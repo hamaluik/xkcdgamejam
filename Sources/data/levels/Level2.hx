@@ -1,8 +1,9 @@
 package data.levels;
 
+import kha.System;
 import data.Level;
 import haxe.ds.IntMap;
-import glm.Vec2;
+import glm.Vec3;
 
 class Level2 implements Level {
     @:allow(data.levels.Level1)
@@ -23,10 +24,8 @@ class Level2 implements Level {
         }
         
         Game.engine.create([
-            new components.Sprite(
-                new Vec2(0, 480 - Game.resources.teacher.height),
-                Game.resources.teacher
-            )
+            new components.Sprite(Game.resources.teacher),
+            new components.Transform(false, new Vec3(0, Game.state.h - Game.resources.teacher.height))
         ]);
 
         Game.renderPhase.add(new systems.RenderSprites());

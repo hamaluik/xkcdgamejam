@@ -106,6 +106,7 @@ class Game {
         renderPhase = engine.createPhase();
 
         levels[currentLevel].load();
+        Main.hideLoading();
 
         state.time = kha.Scheduler.time();
     }

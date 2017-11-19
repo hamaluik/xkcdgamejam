@@ -15,7 +15,7 @@ class DialogOverlay implements IComponent {
         this.delay = delay;
         this.displayTime = displayTime;
         this.transitionTime = transitionTime;
-        this.opacity = 1;
+        this.opacity = 0;
         this.t = 0;
     }
 }

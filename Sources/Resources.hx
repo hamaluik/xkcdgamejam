@@ -12,6 +12,7 @@ using StringTools;
 @:allow(Game)
 class Resources {
     public var bmgLogo(default, null):Image;
+    public var comic(default, null):Image;
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
     public var muteIcon(default, null):Image;
@@ -43,6 +44,7 @@ class Resources {
 
     function new() {
         bmgLogo = Assets.images.blazingmammothgames;
+        comic = Assets.images.comic;
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
         muteIcon = Assets.images.mute;

@@ -17,6 +17,23 @@ class RenderHUDSystem implements ISystem {
     public function new() {}
 
     function update(cam:Camera, s:SnapCamera, f:Film) {
+        var ww:Float = System.windowWidth(); var wh:Float = System.windowHeight();
+        if(!Game.state.pointerLocked) {
+            var g = Game.state.g2;
+            g.begin(false);
+            g.font = Game.resources.xkcdFont;
+            g.fontSize = 24;
+            g.color = Color.White;
+            var sw:Float = g.font.width(g.fontSize, "<PAUSED>");
+            g.drawString("<PAUSED>", (ww-sw)/2, (wh - g.font.height(g.fontSize))/2);
+            var y:Float = (wh - g.font.height(g.fontSize))/2 + g.font.height(g.fontSize) + 4;
+            g.fontSize = 12;
+            sw = g.font.width(g.fontSize,  "(click to resume)");
+            g.drawString("(click to resume)", (ww-sw)/2, y);
+            g.end();
+            return;
+        }
+
         var shotsTaken:Int = 0;
         var shotsTotal:Int = f.shots.length;
         for(shot in f.shots) {
@@ -41,7 +58,6 @@ class RenderHUDSystem implements ISystem {
         g.font = Game.resources.xkcdFont;
 
         // render the last shot we took
-        var ww:Float = System.windowWidth(); var wh:Float = System.windowHeight();
         g.fontSize = 24;
         for(sh in shotDisplays) {
             g.pushRotation(sh.data.d.rotation, ww / 2, wh / 2);
