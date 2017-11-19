@@ -1,6 +1,7 @@
 import kha.Assets;
 import kha.Image;
 import kha.Font;
+import kha.Sound;
 import gltf.GLTF;
 import types.Mesh;
 import glm.Vec4;
@@ -11,6 +12,7 @@ class Resources {
     public var palette(default, null):Image;
     public var cameraOverlay(default, null):Image;
     public var font(default, null):Font;
+    public var ambience(default, null):Sound;
 
     public var bun1(default, null):Mesh;
     public var bun2(default, null):Mesh;
@@ -35,6 +37,7 @@ class Resources {
         palette = Assets.images.palette;
         cameraOverlay = Assets.images.cameraoverlay;
         font = Assets.fonts.Targa;
+        ambience = Assets.sounds._288899__petebuchwald__rocky_mountain_outdoors_wind_and_birds;
 
         var Bun1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.Bun1_gltf.toString(),

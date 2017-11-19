@@ -7,6 +7,8 @@ using glm.Quat;
 class Level1 implements Level {
     public function new() {}
 
+    var ambience:kha.audio1.AudioChannel;
+
     public function load():Void {
         Game.engine.create([
             new components.Transform(
@@ -69,6 +71,8 @@ class Level1 implements Level {
         Game.renderPhase.add(new systems.Render());
         Game.renderPhase.add(new systems.RenderPostProcessing());
         Game.renderPhase.add(new systems.RenderHUDSystem());
+
+        ambience = kha.audio1.Audio.play(Game.resources.ambience, true);
     }
 
     public function unload():Void {
