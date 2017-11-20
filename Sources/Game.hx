@@ -75,6 +75,7 @@ class Game {
                         state.jumpPressed = true;
                     }
                     case M: mute = !mute;
+                    case R: state.restartPressed = true;
                     default:
                 }
             },
@@ -123,6 +124,7 @@ class Game {
         state.mouseDeltaY = 0;
         state.jumpPressed = false;
         state.mousePressed = false;
+        state.restartPressed = false;
     }
 
     static function render(fb:Framebuffer):Void {
@@ -132,11 +134,14 @@ class Game {
     }
 
     public static function lockPointer():Void {
-        kha.SystemImpl.khanvas.onclick = requestPointerLock;
+        //kha.SystemImpl.khanvas.onclick = requestPointerLock;
+        kha.SystemImpl.khanvas.addEventListener('click', requestPointerLock);
     }
 
     public static function unlockPointer():Void {
         js.Browser.document.exitPointerLock();
+        //kha.SystemImpl.khanvas.onclick = null;
+        kha.SystemImpl.khanvas.removeEventListener('click', requestPointerLock);
     }
 
     static function requestPointerLock():Void {

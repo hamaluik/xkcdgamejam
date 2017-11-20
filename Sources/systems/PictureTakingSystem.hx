@@ -177,6 +177,6 @@ class PictureTakingSystem implements ISystem {
         for(key in results.keys()) {
             js.Browser.console.log('  ${components.Bun.buns.get(key).name} => ${results.get(key)}');
         }
-        js.Browser.console.log('Score: ', snapShot.analysis.score);
+        js.Browser.console.log('Score: ', snapShot.analysis.total);
     }
 }

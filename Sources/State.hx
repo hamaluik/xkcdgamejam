@@ -28,6 +28,8 @@ class State {
     var inputRight:Float = 0;
     var inputLeft:Float = 0;
 
+    public var restartPressed(default, null):Bool = false;
+
     public var forwardBackwardAxis(get, never):Float;
     function get_forwardBackwardAxis():Float {
         return inputForward - inputBack;

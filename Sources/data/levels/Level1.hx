@@ -63,15 +63,15 @@ class Level1 implements Level {
             }
         }
 
-        // spawn Settings.numBuns bunnies, the first being the king which should be the furthest away
+        // spawn Settings.numBuns bunnies, the first being the king ~~which should be the furthest away~~
         var actualSpawns:Array<{ pos:Vec3, rot:Quat }> = Game.resources.bunSpawns.shuffle().slice(0, Settings.numBuns);
-        actualSpawns.sort(function(a, b):Int {
+        /*actualSpawns.sort(function(a, b):Int {
             var amag:Float = a.pos.lengthSquared();
             var bmag:Float = b.pos.lengthSquared();
             if(amag > bmag) return -1;
             else if(amag < bmag) return 1;
             return 0;
-        });
+        });*/
         var kingSpawned:Bool = false;
         for(s in actualSpawns) {
             var size:Float = Game.random.GetFloatIn(Settings.minBunSize, Settings.maxBunSize);
@@ -155,10 +155,20 @@ class Level1 implements Level {
             }
         }
 
+        // turn off all audio
+        for(entity in Game.engine.entities()) {
+            if(entity.existsType(components.AudioSource)) {
+                var s:components.AudioSource = entity.get(components.AudioSource);
+                s.audio.volume = 0;
+                s.audio.stop();
+            }
+        }
+
         Game.unlockPointer();
         Game.renderPhase.clearSystems();
         Game.updatePhase.clearSystems();
         Game.engine.clear();
+        Game.unlockPointer();
     }
 
     public function pause():Void {
