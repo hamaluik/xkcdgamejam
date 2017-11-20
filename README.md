@@ -1,6 +1,20 @@
 # xkcdgamejam
 https://itch.io/jam/xkcdgamejam
 
+Check out the resulting game at: https://blazingmammothgames.itch.io/bun-snap
+
+## How to Build + Run
+
+1. Clone the repo recursively:
+```bash
+$>git clone --recursive https://github.com/BlazingMammothGames/xkcdgamejam.git
+```
+2. Build with node:
+```bash
+$>node kha/make html5
+```
+3. The compiled files will be in the `build/html5` folder—serve them up with whichever http server you like!
+
 ## Ideas
 
 * [Bookstore](https://xkcd.com/294/): you have to escape a bookstore which is trying to make you pay for all the knowledge in your head that is also in their books
