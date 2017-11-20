@@ -12,8 +12,7 @@ class AdvanceShotAnalysisSystem implements ISystem {
         
         if(a.shots[a.i].analysis.mainBun == null)
             a.stage = ShotAnalysisStage.Total;
-        else
-            a.stage++;
+        a.stage++;
          
         if(a.stage > ShotAnalysisStage.Total) {
             a.i++;

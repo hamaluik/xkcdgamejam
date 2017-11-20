@@ -64,16 +64,16 @@ class RenderScores implements ISystem {
             else "I can't make out any buns in this one...";
         g.drawString(nameString, 178, y); y += g.font.height(g.fontSize) + 4;
         
-        if(a.stage >= ShotAnalysisStage.Rank) {
+        if(a.stage >= ShotAnalysisStage.Rank && a.shots[a.i].analysis.mainBun != null) {
             g.drawString(rankToString(a.shots[a.i].analysis.rank), 178, y); y += g.font.height(g.fontSize) + 4;
         }
-        if(a.stage >= ShotAnalysisStage.Size) {
+        if(a.stage >= ShotAnalysisStage.Size && a.shots[a.i].analysis.mainBun != null) {
             g.drawString(sizeToString(a.shots[a.i].analysis.size), 178, y); y += g.font.height(g.fontSize) + 4;
         }
-        if(a.stage >= ShotAnalysisStage.Friends) {
+        if(a.stage >= ShotAnalysisStage.Friends && a.shots[a.i].analysis.mainBun != null) {
             g.drawString(friendsToString(a.shots[a.i].analysis.friends), 178, y); y += g.font.height(g.fontSize) + 4;
         }
-        if(a.stage >= ShotAnalysisStage.Total) {
+        if(a.stage >= ShotAnalysisStage.Total && a.shots[a.i].analysis.mainBun != null) {
             g.drawString(totalToString(a.shots[a.i].analysis.total), 178, y); y += g.font.height(g.fontSize) + 4;
         }
         
