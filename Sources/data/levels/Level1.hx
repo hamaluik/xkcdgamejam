@@ -28,7 +28,8 @@ class Level1 implements Level {
             new components.Crouch(),
             new components.Jump(),
             new components.Film(),
-            new components.Bumper(0.5)
+            new components.Bumper(0.5),
+            new components.FootstepSFX()
         ]);
 
         Game.engine.create([
@@ -118,6 +119,7 @@ class Level1 implements Level {
             new components.DialogOverlay("There's gotta be *some* around here somewhere!", 1+3+0.5+3+0.5+3+0.5, 3, 0.25)
         ]);
 
+        Game.updatePhase.add(new systems.FootstepSFXSystem());
         Game.updatePhase.add(new systems.LevelSwitcher());
         Game.updatePhase.add(new systems.AudioPlayer());
         Game.updatePhase.add(new systems.FPSMovementSystem());

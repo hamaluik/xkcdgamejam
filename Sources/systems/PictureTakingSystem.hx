@@ -109,6 +109,10 @@ class PictureTakingSystem implements ISystem {
                     new components.ShotDisplay(f.shots[shotsTaken])
                 ]);
 
+                Game.engine.create([
+                    new components.AudioSource(Game.resources.cameraSound, false)
+                ]);
+
                 // don't start flashing yet!
                 return;
             }

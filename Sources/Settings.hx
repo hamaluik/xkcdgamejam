@@ -23,4 +23,5 @@ class Settings {
     public static var numShots:Int = 12; // TODO: == numBuns?
     public static var shotDisplayTime:Float = 2.0;
     public static var shotDisplayFadeTime:Float = 1.0;
+    public static var footStepDistance:Float = 2.0;
 }

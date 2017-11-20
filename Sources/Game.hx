@@ -36,8 +36,7 @@ class Game {
     }
 
     static function initialize():Void {
-        // TODO: new seed each time
-        random = new Random(0);
+        random = new Random(Std.int(Date.now().getTime()));
         resources = new Resources();
 
         Mouse.get(0).notify(

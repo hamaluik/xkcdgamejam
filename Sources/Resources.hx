@@ -21,6 +21,9 @@ class Resources {
     public var font(default, null):Font;
     public var ambience(default, null):Sound;
     public var teacher(default, null):Image;
+    public var cameraSound(default, null):Sound;
+    public var footLeft(default, null):Sound;
+    public var footRight(default, null):Sound;
 
     public var bun1(default, null):Mesh;
     public var bun2(default, null):Mesh;
@@ -38,6 +41,7 @@ class Resources {
     public var spruceTree2(default, null):Mesh;
     public var spruceTree3(default, null):Mesh;
     public var ground(default, null):Mesh;
+    public var grass(default, null):Mesh;
 
     public var BigRock1(default, null):Mesh;
     public var BigRock2(default, null):Mesh;
@@ -84,6 +88,9 @@ class Resources {
         xkcdFont = Assets.fonts.xkcd;
         ambience = Assets.sounds._288899__petebuchwald__rocky_mountain_outdoors_wind_and_birds;
         teacher = Assets.images.teacher;
+        cameraSound = Assets.sounds.camera_shutter_click_03;
+        footLeft = Assets.sounds.footstep_left;
+        footRight = Assets.sounds.footstep_right;
 
         var Bun1_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.Bun1_gltf.toString(),
@@ -361,6 +368,12 @@ class Resources {
         );
         ground = Mesh.fromGLTFPrimitive(Ground_g.meshes[0].primitives[0]);
 
+        var Grass_g:GLTF = GLTF.parseAndLoad(
+            Assets.blobs.Grass_gltf.toString(),
+            [Assets.blobs.Grass_bin.bytes]
+        );
+        grass = Mesh.fromGLTFPrimitive(Grass_g.meshes[0].primitives[0]);
+
         var Forest_g:GLTF = GLTF.parseAndLoad(
             Assets.blobs.Forest_gltf.toString(), []
         );
@@ -421,6 +434,7 @@ class Resources {
                         case 'Rock_24': Rock_24;
                         case 'Rock_25': Rock_25;
                         case 'Ground': ground;
+                        case 'Grass': grass;
                         default: null;
                     },
                     radius: switch(node.mesh.name) {

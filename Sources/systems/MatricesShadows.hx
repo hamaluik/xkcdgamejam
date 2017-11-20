@@ -14,7 +14,7 @@ class MatricesShadows implements ISystem {
 
 	function update(ss:SunShadow, transform:Transform, ld:LightDirection) {
 		if(!ss.dirty) return;
-		ss.p = GLM.orthographic(-75, 75, -75, 75, ss.znear, ss.zfar, ss.p);
+		ss.p = GLM.orthographic(-50, 50, -50, 50, ss.znear, ss.zfar, ss.p);
         ss.v = transform.m.invert(ss.v);
         ss.vp = Mat4.multMat(ss.p, ss.v, ss.vp);
 		forward.localDirectionToWorld(transform.m, ld.direction);
