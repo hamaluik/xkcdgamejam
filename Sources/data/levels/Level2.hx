@@ -28,9 +28,25 @@ class Level2 implements Level {
             new components.Transform(false, new Vec3(0, Game.state.h - Game.resources.teacher.height))
         ]);
 
-        Game.engine.create([
-            new components.ShotAnalysis(film.shots.toArray())
-        ]);
+        var hasTakenAnyShots:Bool = false;
+        if(film != null) {
+            for(shot in film.shots) {
+                if(shot.taken) {
+                    hasTakenAnyShots = true;
+                    break;
+                }
+            }
+        }
+        if(hasTakenAnyShots) {
+            Game.engine.create([
+                new components.ShotAnalysis(film.shots.toArray())
+            ]);
+        }
+        else {
+            Game.engine.create([
+                new components.TotalDisplay()
+            ]);
+        }
 
         Game.updatePhase.add(new systems.AdvanceShotAnalysisSystem());
         Game.updatePhase.add(new systems.RestartSystem());
@@ -39,8 +55,6 @@ class Level2 implements Level {
         Game.renderPhase.add(new systems.RenderSprites());
         Game.renderPhase.add(new systems.RenderScores());
         Game.renderPhase.add(new systems.RenderTotal());
-
-        Game.unlockPointer();
     }
 
     public function unload():Void {

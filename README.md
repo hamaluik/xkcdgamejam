@@ -35,9 +35,9 @@ https://itch.io/jam/xkcdgamejam
 
 * "[Rabbit](https://poly.google.com/view/dyeBDJxhDwP)" by [Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 * "[Rocky Mountain Outdoors: wind and birds](https://freesound.org/people/petebuchwald/sounds/288899/)" by [Pete Buchwald](http://www.petebuchwald.com/) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
-* "[Low Poly Forest Pack](https://jaks.itch.io/lowpolyforestpack)" by [Jaks](https://jaks.itch.io/)
+* "[Low Poly Forest Pack](https://jaks.itch.io/lowpolyforestpack)" by [Jaks](https://jaks.itch.io/) is [&copy; Jaks](https://jaks.itch.io/lowpolyforestpack)
 * "[Mute](https://thenounproject.com/search/?q=mute&i=1365422)" by [Rajive Sharma](https://thenounproject.com/rajive.sharma/) is licensed under [CC BY 3.0 US](https://creativecommons.org/licenses/by/3.0/us/)
 * "[Targa Mono](http://www.zetafonts.com/targa-monospace)" by [Cosimo Lorenzo Pancini](http://www.cosimolorenzopancini.com/) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 * "[XKCD-Regular](http://xkcd.com/1350/xkcd-Regular.otf)" by [Randall Munroe](https://xkcd.com/about/) is licensed under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
-* "[Camera Shutter Click 03](https://www.soundjay.com/mechanical/sounds/camera-shutter-click-03.mp3)" by [Sound Jay](https://www.soundjay.com/index.html) is [&copy; Sound Jay](https://www.soundjay.com/tos.html).
+* "[Camera Shutter Click 03](https://www.soundjay.com/mechanical/sounds/camera-shutter-click-03.mp3)" by [Sound Jay](https://www.soundjay.com/index.html) is [&copy; Sound Jay](https://www.soundjay.com/tos.html)
 * "[Footsteps in Forest - 01.mp3](https://freesound.org/people/Gutek/sounds/201885/)" by [Gutek](https://freesound.org/people/Gutek/) is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

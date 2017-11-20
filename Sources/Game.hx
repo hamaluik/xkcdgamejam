@@ -19,9 +19,9 @@ class Game {
     public static var random(default, null):Random;
     public static var resources(default, null):Resources;
 
-    public static var mute(default, null):Bool = true; // TODO: make false for release!
+    public static var mute(default, null):Bool = false;
 
-    public static var currentLevel:Int = 0;
+    public static var currentLevel:Int = 1;
     public static var levels(default, null):Array<Level> = [
         new data.levels.Level0(),
         new data.levels.Level1(),
@@ -29,7 +29,6 @@ class Game {
     ];
 
     public static function changeLevel(nextLevel:Int):Void {
-        js.Browser.console.log('Changing level to: ', nextLevel);
         levels[currentLevel].unload();
         currentLevel = nextLevel;
         levels[currentLevel].load();
@@ -150,9 +149,5 @@ class Game {
 
     static function pointerLockChanged():Void {
         Game.state.pointerLocked = js.Browser.document.pointerLockElement == kha.SystemImpl.khanvas;
-        if(Game.state.pointerLocked)
-            kha.SystemImpl.khanvas.onclick = null;
-        else
-            kha.SystemImpl.khanvas.onclick = requestPointerLock;
     }
 }
