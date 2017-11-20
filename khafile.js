@@ -12,11 +12,11 @@ project.addLibrary('edge');
 project.addAssets('Assets/**');
 
 // TODO: disable -debug, enable -dce full for release
-project.addParameter('-debug');
-//project.addParameter('-dce full');
+//project.addParameter('-debug');
+project.addParameter('-dce full');
 
 // HTML target
-project.windowOptions.width = 512;
-project.windowOptions.height = 512;
+project.windowOptions.width = 640;
+project.windowOptions.height = 480;
 
 resolve(project);

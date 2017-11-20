@@ -21,7 +21,7 @@ class Game {
 
     public static var mute(default, null):Bool = false;
 
-    public static var currentLevel:Int = 1;
+    public static var currentLevel:Int = 0;
     public static var levels(default, null):Array<Level> = [
         new data.levels.Level0(),
         new data.levels.Level1(),

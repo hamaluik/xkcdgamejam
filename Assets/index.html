@@ -10,7 +10,7 @@
 			color: white;
 			font-family: Sans-Serif;
 		}
-		canvas {
+		canvas, #controls {
 			padding-left: 0;
 			padding-right: 0;
 			margin-left: auto;
@@ -33,6 +33,21 @@
 <body>
 	<div id="loading"><span>Loading (0%)</span></div>
 	<canvas id="khanvas" width="640" height="480"></canvas>
+	<div id="controls">
+		<h3>Controls</h3>
+		<ul>
+			<li>W: Walk Forward</li>
+			<li>A: Strafe Left</li>
+			<li>S: Walk Backward</li>
+			<li>D: Straft Right</li>
+			<li>Shift: Run</li>
+			<li>C: Crouch</li>
+			<li>V / Right Mouse Button: Enable Camera</li>
+			<li>Left Mouse Button: Take Picture / Click</li>
+			<li>Mouse Movement: Aim</li>
+			<li>M: Toggle Mute</li>
+		</ul>
+	</div>
 	<script>
 		navigator.getVRDisplays = false;
 	</script>
